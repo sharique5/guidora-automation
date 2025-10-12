@@ -1,0 +1,13 @@
+{
+  "current_week": 2,
+  "last_processed_verse": 200,
+  "total_learnings_generated": 0,
+  "last_run_date": "2025-10-12T20:04:19.285827",
+  "weeks_completed": [
+    {
+      "week": 1,
+      "learnings_extracted": 0,
+      "date": "2025-10-12T20:04:19.285827"
+    }
+  ]
+}

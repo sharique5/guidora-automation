@@ -8,7 +8,7 @@ import json
 import os
 from datetime import datetime, timedelta
 from typing import Dict, List
-from lib.learning_extractor import LearningExtractor
+from learning_extractor import LearningExtractor
 
 class WeeklyCadenceManager:
     """Manages weekly processing of content generation."""
