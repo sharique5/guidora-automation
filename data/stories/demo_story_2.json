@@ -1,0 +1,51 @@
+{
+  "id": "story_3_1_muslim_demo002",
+  "source_learning_id": "learning_3_1_4d16a857",
+  "title": "Signs in the Storm",
+  "description": "A young Muslim engineer finds divine guidance in unexpected places during a career crisis.",
+  "content": "Ahmed stared at the termination letter, his hands trembling slightly. After three years of dedication, budget cuts had claimed his position at the tech startup. His wife was expecting their first child in two months.\n\n\"Allah has a plan,\" his mother had always said, but right now, that felt like empty comfort. As he walked home through the city, doubt clouded his thoughts. Had he made the right choices? Was he on the correct path?\n\nAt the bus stop, he noticed an elderly man struggling with heavy groceries. Without thinking, Ahmed helped him to a nearby bench. \"You're very kind,\" the man said in accented English. \"I'm new here from Syria. People like you remind me that goodness exists everywhere.\"\n\nAs they talked, Ahmed learned the man was a retired engineer who had lost everything in the war but rebuilt his life through determination and faith. \"I see Allah's guidance in the smallest moments,\" the elder shared. \"Even in difficulties, there are signs pointing us toward something better.\"\n\nThat evening, Ahmed received an unexpected call. A former colleague had recommended him for a position at a company developing clean energy solutions—work that aligned with his deepest values. The salary was better, the mission meaningful.\n\nLater, during Maghrib prayer, Ahmed reflected on the day's events. The job loss that felt like a disaster had led him to help someone in need, which had somehow renewed his own faith and hope. In the most challenging moment, signs of divine guidance had appeared through human connection and unexpected opportunities.\n\n\"Subhan'Allah,\" he whispered, finally understanding what his mother meant. The path forward was becoming clear, one sign at a time.",
+  "category": "faith_recognition",
+  "target_audience": "muslim_community",
+  "estimated_duration": 185,
+  "themes": [
+    "Faith",
+    "Guidance",
+    "Psychology"
+  ],
+  "characters": [
+    "Ahmed",
+    "engineer",
+    "elderly man",
+    "colleague"
+  ],
+  "setting": "public",
+  "youtube_title": "When I Lost Everything, I Found These Divine Signs",
+  "youtube_description": "A young Muslim professional discovers how Allah's guidance appears in the most unexpected moments. This story shows how faith and action work together, even during life's biggest challenges. For anyone seeking signs of divine wisdom in difficult times.",
+  "youtube_tags": [
+    "Islamic inspiration",
+    "faith journey",
+    "divine guidance",
+    "Muslim professionals",
+    "career struggles",
+    "signs from Allah",
+    "spiritual growth",
+    "Islamic stories"
+  ],
+  "thumbnail_concept": "Young Muslim man in thoughtful pose, warm golden lighting, subtle geometric Islamic patterns",
+  "target_keywords": [
+    "Islamic guidance",
+    "faith in difficulty",
+    "divine signs",
+    "Muslim inspiration",
+    "spiritual resilience"
+  ],
+  "generation_metadata": {
+    "story_tokens": 485,
+    "metadata_tokens": 135,
+    "total_cost": 0.031,
+    "model_used": "demo-gpt-4",
+    "prompt_type": "muslim"
+  },
+  "generated_at": "2025-10-12T20:30:01.069133",
+  "quality_score": 0.0
+}

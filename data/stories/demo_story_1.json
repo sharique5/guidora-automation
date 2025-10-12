@@ -1,0 +1,52 @@
+{
+  "id": "story_1_1_universal_demo001",
+  "source_learning_id": "learning_1_1_b9b9bc1f",
+  "title": "The Five-Minute Morning That Changed Everything",
+  "description": "A busy executive discovers how brief moments of reflection transform her entire day and relationships.",
+  "content": "Maya's alarm buzzed at 5:30 AM, same as every morning for the past five years. Coffee, emails, meetings, deadlines—the cycle never stopped. But today felt different.\n\nYesterday, her grandmother had mentioned something simple: \"Start each day by remembering what matters most.\" Maya had brushed it off then, but now, sitting in her kitchen before the chaos began, those words echoed.\n\nShe set down her phone and closed her eyes for just five minutes. No meditation app, no special technique—just breathing and thinking about the day ahead with intention. She thought about her team, her family, the projects that could make a real difference.\n\nWhen she opened her eyes, something had shifted. The same challenges awaited, but her perspective had changed. In meetings, she found herself truly listening instead of planning her next response. During lunch, she called her grandmother instead of scrolling social media.\n\nThat evening, her daughter noticed. \"Mom, you seem... happier today.\" Maya smiled, realizing that five minutes of intentional reflection had created ripples throughout her entire day.\n\nThe practice became her secret weapon—not because it made problems disappear, but because it helped her remember what truly mattered. In a world demanding constant motion, she had discovered the power of momentary stillness.",
+  "category": "spiritual_practice",
+  "target_audience": "universal",
+  "estimated_duration": 165,
+  "themes": [
+    "Faith",
+    "Worship",
+    "Guidance"
+  ],
+  "characters": [
+    "Maya",
+    "executive",
+    "grandmother",
+    "daughter"
+  ],
+  "setting": "home",
+  "youtube_title": "The 5-Minute Morning Habit That Transforms Your Entire Day",
+  "youtube_description": "Discover how one busy executive found peace and clarity through a simple daily practice. This isn't about meditation—it's about intentional living. Watch to learn the exact 5-minute routine that changed everything.",
+  "youtube_tags": [
+    "morning routine",
+    "mindfulness",
+    "productivity",
+    "work-life balance",
+    "daily habits",
+    "stress relief",
+    "intentional living",
+    "executive life",
+    "busy professionals"
+  ],
+  "thumbnail_concept": "Professional woman with peaceful expression, sunrise lighting, subtle clock showing 5:30 AM",
+  "target_keywords": [
+    "morning routine",
+    "daily reflection",
+    "work-life balance",
+    "mindful living",
+    "executive wellness"
+  ],
+  "generation_metadata": {
+    "story_tokens": 450,
+    "metadata_tokens": 120,
+    "total_cost": 0.0285,
+    "model_used": "demo-gpt-4",
+    "prompt_type": "universal"
+  },
+  "generated_at": "2025-10-12T20:30:01.069133",
+  "quality_score": 0.0
+}

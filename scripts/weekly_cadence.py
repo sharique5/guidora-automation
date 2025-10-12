@@ -9,6 +9,7 @@ import os
 from datetime import datetime, timedelta
 from typing import Dict, List
 from learning_extractor import LearningExtractor
+from story_generator import StoryGenerator
 
 class WeeklyCadenceManager:
     """Manages weekly processing of content generation."""
@@ -23,11 +24,17 @@ class WeeklyCadenceManager:
         if os.path.exists(self.state_file):
             with open(self.state_file, 'r') as f:
                 self.state = json.load(f)
+                
+            # Migrate old state format to include story generation
+            if "total_stories_generated" not in self.state:
+                self.state["total_stories_generated"] = 0
+                print("🔄 Migrating state to include story generation tracking")
         else:
             self.state = {
                 "current_week": 1,
                 "last_processed_verse": 0,
                 "total_learnings_generated": 0,
+                "total_stories_generated": 0,
                 "last_run_date": None,
                 "weeks_completed": []
             }
@@ -57,30 +64,60 @@ class WeeklyCadenceManager:
         print(f"🚀 Starting Week {self.state['current_week']} Processing")
         print(f"📊 Processing verses {self.state['last_processed_verse'] + 1} to {self.state['last_processed_verse'] + self.verses_per_week}")
         
-        # Initialize learning extractor
+        # Step 1: Learning Extraction
+        print(f"\n📚 Step 1: Learning Extraction")
         extractor = LearningExtractor(
             data_file="data/tafsir/quran_filtered.jsonl",
             output_file="data/learnings/learnings.jsonl"
         )
         
-        # Process this week's batch
         learnings = self._process_batch(extractor)
+        print(f"✅ Extracted {len(learnings)} new learnings")
+        
+        # Step 2: Story Generation (only if we have new learnings)
+        stories_generated = 0
+        if learnings:
+            print(f"\n🎬 Step 2: Story Generation")
+            try:
+                story_generator = StoryGenerator()
+                
+                # Generate stories for each new learning
+                for learning_data in learnings:
+                    try:
+                        # Generate universal story
+                        story = story_generator.generate_story(learning_data.__dict__ if hasattr(learning_data, '__dict__') else learning_data, target_audience='universal')
+                        story_generator.save_story(story)
+                        stories_generated += 1
+                        print(f"   ✅ Generated story: {story.title[:50]}...")
+                        
+                    except Exception as e:
+                        print(f"   ⚠️ Failed to generate story for learning: {e}")
+                        
+            except Exception as e:
+                print(f"   ⚠️ Story generation not available (likely missing API key): {e}")
+                print(f"   💡 Set OPENAI_API_KEY or ANTHROPIC_API_KEY to enable story generation")
+        else:
+            print(f"\n🎬 Step 2: Story Generation - Skipped (no new learnings)")
         
         # Update state
         self.state["last_processed_verse"] += self.verses_per_week
         self.state["total_learnings_generated"] += len(learnings)
+        self.state["total_stories_generated"] += stories_generated
         self.state["last_run_date"] = datetime.now().isoformat()
         self.state["weeks_completed"].append({
             "week": self.state["current_week"],
             "learnings_extracted": len(learnings),
+            "stories_generated": stories_generated,
             "date": datetime.now().isoformat()
         })
         self.state["current_week"] += 1
         
         self.save_state()
         
-        print(f"✅ Week {self.state['current_week'] - 1} completed!")
+        print(f"\n✅ Week {self.state['current_week'] - 1} completed!")
         print(f"📈 Total learnings generated: {self.state['total_learnings_generated']}")
+        print(f"🎬 Total stories generated: {self.state['total_stories_generated']}")
+        print(f"📊 Pipeline: Verses → Learnings → Stories → Ready for TTS (Week 3)")
     
     def _process_batch(self, extractor: LearningExtractor) -> List:
         """Process a batch of verses."""
@@ -108,6 +145,7 @@ class WeeklyCadenceManager:
             "total_verses": total_verses,
             "progress_percentage": round(progress_percentage, 1),
             "learnings_generated": self.state["total_learnings_generated"],
+            "stories_generated": self.state["total_stories_generated"],
             "estimated_weeks_remaining": estimated_weeks_remaining,
             "weeks_completed": len(self.state["weeks_completed"])
         }
@@ -126,7 +164,9 @@ def main():
     print(f"   Week: {progress['current_week']}")
     print(f"   Verses Processed: {progress['verses_processed']}/{progress['total_verses']} ({progress['progress_percentage']}%)")
     print(f"   Learnings Generated: {progress['learnings_generated']}")
+    print(f"   Stories Generated: {progress['stories_generated']}")
     print(f"   Estimated Weeks Remaining: {progress['estimated_weeks_remaining']}")
+    print(f"   📋 Full Pipeline: Verses → Learnings → Stories → TTS → Video → YouTube")
     
     # Run weekly processing
     manager.run_weekly_processing()

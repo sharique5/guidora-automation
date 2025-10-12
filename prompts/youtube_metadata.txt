@@ -1,0 +1,48 @@
+**Create YouTube metadata for this story:**
+
+Story: "{story_content}"
+
+**Generate the following for YouTube optimization:**
+
+**TITLE** (60 characters max):
+Create an engaging, click-worthy title that:
+- Includes emotional hooks or curiosity gaps
+- Uses power words (transform, discover, secret, simple, etc.)
+- Targets the main audience 
+- Avoids clickbait but maintains intrigue
+- Consider formats like:
+  * "How [Action] Changed Everything"
+  * "The Simple [Thing] That [Result]"
+  * "[Number] Minutes That [Transformation]"
+  * "Why [Everyone] Should [Action]"
+
+**DESCRIPTION** (125 words max):
+Write a compelling description that:
+- Summarizes the key insight in 1-2 sentences
+- Mentions the transformation or benefit
+- Includes a call-to-action for engagement
+- Uses relevant keywords naturally
+- Ends with questions to encourage comments
+
+**TAGS** (10-15 tags):
+Generate relevant tags including:
+- Main theme keywords (wisdom, inspiration, personal growth)
+- Audience-specific terms (spiritual, motivation, life lessons)
+- Content type (story, parable, life advice)
+- Emotional keywords (peace, happiness, success)
+- Demographic terms if applicable
+
+**THUMBNAIL CONCEPT** (2-3 sentences):
+Describe visual elements for thumbnail:
+- Key emotional moment from story
+- Color scheme and mood
+- Text overlay if any
+- Character representation
+
+**TARGET KEYWORDS** (5-7 keywords):
+List primary SEO keywords this video should rank for
+
+**AUDIENCE INSIGHTS** (3-4 sentences):
+Describe who would most connect with this content and why
+
+Generate all metadata components following these guidelines.

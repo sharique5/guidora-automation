@@ -1,0 +1,53 @@
+**Generate a compelling YouTube story for this practical wisdom:**
+
+"{practical_application}"
+
+**Story Requirements:**
+- **Target Audience**: Universal (all backgrounds, cultures, ages)
+- **Length**: 300-500 words (2-3 minute video)
+- **Style**: Modern, relatable scenario
+- **Tone**: Warm, inspiring, accessible
+
+**Story Structure:**
+
+**TITLE** (5-8 words): 
+Create a compelling, curiosity-driven title that hints at the transformation or insight without giving it away.
+
+**DESCRIPTION** (2-3 sentences):
+Write a brief description that would work as a YouTube video description, highlighting the main benefit viewers will gain.
+
+**STORY CONTENT:**
+
+1. **HOOK** (1-2 sentences): Start with a relatable situation that immediately grabs attention
+
+2. **CHARACTER & SCENARIO** (2-3 paragraphs): Introduce a protagonist facing a modern challenge. Make them diverse and relatable. Common scenarios:
+   - Overwhelmed working professional
+   - Stressed student or parent
+   - Someone facing a life transition
+   - Person dealing with relationship conflict
+
+3. **THE CHALLENGE** (1-2 paragraphs): Show the specific problem or dilemma they're facing. Make it authentic and emotionally resonant.
+
+4. **THE INSIGHT** (2-3 paragraphs): Show how they discover or apply the wisdom principle. Make the application natural and realistic, not preachy.
+
+5. **THE TRANSFORMATION** (1-2 paragraphs): Show the positive change or resolution. Keep it believable and inspiring.
+
+6. **UNIVERSAL TAKEAWAY** (1 paragraph): End with a clear, actionable insight that any viewer can apply immediately.
+
+**Guidelines:**
+- Use inclusive, secular language
+- Focus on universal human experiences
+- Make the wisdom application feel natural, not forced
+- Include diverse characters and settings
+- Keep dialogue authentic and conversational
+- Show, don't just tell the transformation
+- End with hope and practical application
+
+**Avoid:**
+- Religious terminology or specific faith references
+- Preaching or lecturing tone
+- Unrealistic overnight transformations
+- Cultural stereotypes
+- Overly dramatic scenarios
+
+Generate the complete story following this exact structure.
