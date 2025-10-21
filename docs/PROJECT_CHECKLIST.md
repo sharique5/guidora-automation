@@ -1,7 +1,7 @@
 # Guidora — Project Checklist & MVP Schedule
 
-**Status**: 🚀 **Week 2 Complete** - Story Generation MVP with OpenAI Integration ✅  
-**Next**: Week 3 - Text-to-Speech Pipeline MVP  
+**Status**: 🚀 **Week 3 Complete** - Text-to-Speech Pipeline MVP with OpenAI TTS ✅  
+**Next**: Week 4 - Video Assembly MVP  
 **Approach**: Weekly MVP iterations with production automation  
 
 ---
@@ -25,13 +25,14 @@
 - [x] **Weekly Integration**: Updated cadence system for automated story generation pipeline
 - [x] **Output**: 4 professional stories (12.5 min content) with YouTube metadata ($0.29 cost)
 
-### **📝 Week 3: Text-to-Speech Pipeline MVP**
-- [ ] **TTS Providers**: Multi-provider support (ElevenLabs, Google, Azure) (`lib/providers/tts_api.py`)
-- [ ] **Voice Selection**: Natural, engaging voice profiles per audience
-- [ ] **SSML Processing**: Pause, emphasis, and pacing optimization
-- [ ] **Audio Pipeline**: Story→Speech with quality validation
-- [ ] **Audio Storage**: Organized file management with metadata
-- [ ] **Output**: High-quality audio files from generated stories
+### **✅ Week 3: Text-to-Speech Pipeline MVP** (COMPLETED)
+- [x] **TTS Providers**: Platform-agnostic multi-provider support (OpenAI, Google, ElevenLabs) (`lib/providers/tts_api.py`)
+- [x] **Voice Selection**: Intelligent voice selection system for different audiences (`lib/tts_manager.py`)
+- [x] **Audio Generation**: Real MP3 audio file generation from story content
+- [x] **Audio Pipeline**: Complete story→speech conversion with cost tracking
+- [x] **Audio Storage**: Organized file management with metadata in `data/audio/files/`
+- [x] **Batch Processing**: CLI tool for processing multiple stories (`scripts/audio_generator.py`)
+- [x] **Output**: High-quality audio files (367.7s content) from generated stories ($0.0142 cost)
 
 ### **🎬 Week 4: Video Assembly MVP**
 - [ ] **Video Engine**: FFmpeg/MoviePy integration (`lib/video_tools/video_assembler.py`)
@@ -118,7 +119,7 @@
 
 ## 📊 **Current Status & Next Actions**
 
-### **Completed (Week 1-2)**
+### **Completed (Week 1-3)**
 ```
 ✅ Data: 6,236 verses processed, 0 duplicates
 ✅ Extraction: 4 unique learnings extracted with fingerprinting
@@ -126,22 +127,27 @@
 ✅ LLM Integration: OpenAI API with cost controls ($0.29 total)
 ✅ YouTube Optimization: Auto-generated metadata for all stories
 ✅ Infrastructure: Weekly batch processing with story generation
+✅ TTS Pipeline: Platform-agnostic audio generation with OpenAI TTS
+✅ Audio Production: 367.7s high-quality MP3 content generated ($0.0142)
+✅ Voice Selection: Intelligent audience-based voice mapping system
 ```
 
-### **Week 3 Priorities**
-1. **TTS Provider Setup** - ElevenLabs/Azure Speech Services configuration
-2. **Voice Selection** - Natural, engaging voices for different audiences
-3. **Audio Pipeline** - Convert stories to high-quality audio files
-4. **SSML Processing** - Optimize pacing, emphasis, and naturalness
-5. **Audio Storage** - Organized file management with metadata
+### **Week 4 Priorities**
+1. **Video Engine Setup** - FFmpeg/MoviePy integration for video assembly
+2. **Visual Assets** - Background images, text overlays, and transitions
+3. **Slideshow Builder** - Auto-sync visuals with generated audio timing
+4. **Template System** - Consistent branding and layout framework
+5. **Quality Control** - 1080p output with optimized encoding
 
 ### **Critical Dependencies**
 - [x] **API Keys**: OpenAI for story generation (configured and tested)
 - [x] **Storage Setup**: Organized file structure for generated content
 - [x] **Prompt Engineering**: Templates for consistent, high-quality output
 - [x] **Error Handling**: Robust failure recovery and retry logic
-- [ ] **TTS API Keys**: ElevenLabs/Azure for voice synthesis
-- [ ] **Audio Processing**: FFmpeg for audio manipulation and optimization
+- [x] **TTS Integration**: OpenAI TTS with platform-agnostic provider system
+- [x] **Audio Processing**: Real MP3 generation with cost tracking and metadata
+- [ ] **Additional TTS APIs**: ElevenLabs/Google for provider diversity (optional)
+- [ ] **Video Processing**: FFmpeg for video assembly and optimization
 
 ---
 
@@ -157,8 +163,9 @@
 │   ├── ✅ fingerprints.py       # Uniqueness detection
 │   ├── ✅ weekly_cadence.py     # Batch processing
 │   ├── ✅ llm_tools.py          # Week 2: LLM integration
-│   ├── 📝 providers/
-│   │   ├── 📝 tts_api.py        # Week 3: TTS providers
+│   ├── ✅ tts_manager.py        # Week 3: TTS orchestration
+│   ├── ✅ providers/
+│   │   ├── ✅ tts_api.py        # Week 3: TTS providers
 │   │   └── 📝 storage_client.py # Cloud storage
 │   └── 📝 video_tools/
 │       ├── 📝 video_assembler.py # Week 4: Video creation
@@ -166,7 +173,8 @@
 ├── 📁 data/
 │   ├── ✅ tafsir/quran_filtered.jsonl # Source data
 │   ├── ✅ learnings/learnings.jsonl   # Extracted wisdom
-│   └── ✅ stories/stories.jsonl       # Generated stories
+│   ├── ✅ videos/videos.jsonl         # Generated stories with metadata
+│   └── ✅ audio/files/                # Week 3: Generated audio files
 ├── 📁 prompts/
 │   ├── ✅ story_universal.txt    # Week 2: Universal audience
 │   ├── ✅ story_muslim.txt       # Week 2: Muslim community
