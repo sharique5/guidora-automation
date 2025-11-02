@@ -36,6 +36,10 @@ data/stories/bulk_exports/
 data/stories/*.zip
 data/stories/*.tar.gz
 
+# =====================================================
+# quran_dataset.csv
+data/tafsir/*.csv
+
 # YouTube API credentials and sensitive data
 config/youtube_credentials.json
 config/api_keys.json

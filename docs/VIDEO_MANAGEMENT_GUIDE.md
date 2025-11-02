@@ -128,10 +128,27 @@ python scripts/video_manager.py report
 - Language distribution and priority
 
 ## 🚀 Next Steps
-1. Create videos for current batch (3 ready: ES, FR, UR)
+1. Create videos for current batch (4 ready: EN, ES, FR, UR)
 2. Add thumbnail generation system
 3. Integrate YouTube API for automated uploads
 4. Add analytics tracking for published videos
+
+## 📁 **Current Script Locations (Ready for Instadoodle)**
+```
+data/stories/
+├── en/
+│   ├── seeing_signs_a_journey_to_inner_strength_en.json
+│   └── ENGLISH_INSTADOODLE_SCRIPT.txt
+├── es/
+│   ├── seeing_signs_a_journey_to_inner_strength_es.json
+│   └── SPANISH_INSTADOODLE_SCRIPT.txt  
+├── fr/
+│   ├── seeing_signs_a_journey_to_inner_strength_fr.json
+│   └── FRENCH_INSTADOODLE_SCRIPT.txt
+└── ur/
+    ├── seeing_signs_a_journey_to_inner_strength_ur.json
+    └── URDU_INSTADOODLE_SCRIPT.txt
+```
 
 ## 💡 Tips
 - Use `register` command after translating new stories
