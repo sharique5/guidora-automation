@@ -1,3 +1,53 @@
+# Guidora Automation - Media Files and Production Assets
+# =====================================================
+
+# Generated Videos (large files, manual Instadoodle creation)
+data/videos/production/*.mp4
+data/videos/production/*.mov  
+data/videos/production/*.avi
+data/videos/drafts/*.mp4
+data/videos/drafts/*.mov
+data/videos/published/*.mp4
+data/videos/published/*.mov
+
+# Generated Audio Files (TTS output, can be regenerated)
+data/audio/*.mp3
+data/audio/*.wav
+data/audio/*.m4a
+
+# Generated Thumbnails (can be regenerated)
+data/thumbnails/*.jpg
+data/thumbnails/*.png
+data/thumbnails/*.jpeg
+
+# Video tracking database (contains sensitive data, local state)
+data/video_tracker.json
+
+# Script outputs and test files
+scripts/output/
+scripts/temp/
+temp_*.py
+test_*.py
+
+# Keep story translations but ignore large script collections
+# (Individual stories are small JSON files, OK to commit)
+# (Bulk script exports would be ignored)
+data/stories/bulk_exports/
+data/stories/*.zip
+data/stories/*.tar.gz
+
+# YouTube API credentials and sensitive data
+config/youtube_credentials.json
+config/api_keys.json
+.youtube_credentials
+.api_keys
+
+# Production logs and temporary files
+*.log
+production_*.json
+batch_*.json
+upload_*.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
