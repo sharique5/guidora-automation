@@ -1,0 +1,11 @@
+{
+  "duration_seconds": 6,
+  "logo_path": "assets/branding/channel_logo.png",
+  "background_color": "#1a1a1a",
+  "text_color": "#ffffff",
+  "accent_color": "#ff4444",
+  "font_family": "Arial Bold",
+  "font_size": 24,
+  "logo_size_percent": 25,
+  "animation_style": "fade_in"
+}

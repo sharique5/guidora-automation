@@ -1,0 +1,122 @@
+{
+  "en": {
+    "video_id": "generic_outro_en",
+    "language": "en",
+    "script": "\n[OUTRO SEGMENT - 6 seconds]\n\nVISUAL: \n- Channel logo appears center-screen (25% width)\n- Dark background (#1a1a1a)\n- Smooth fade_in animation\n\nAUDIO & TEXT:\n\"Thank you for watching!\"\n\n[PAUSE 1 second]\n\n\"Like, Share & Subscribe for more inspirational content\"\n\nVISUAL ELEMENTS:\n- Subscribe button animation (YouTube red)\n- Like and Share icons with gentle pulse effect\n- Channel name: \"Guidora Mindfulness\"\n\n[END OUTRO]\n",
+    "instadoodle_instructions": {
+      "duration": "6 seconds",
+      "scene_description": "\nCreate a professional outro scene with:\n\nBACKGROUND:\n- Solid dark background (#1a1a1a)\n- Clean, minimalist design\n\nMAIN ELEMENTS:\n1. Channel logo (centered, prominent)\n2. Text: \"Thank you for watching!\" (appears first)\n3. Text: \"Like, Share & Subscribe for more inspirational content\" (appears after 1 second)\n4. Subscribe button visual (YouTube red color)\n5. Like and Share icons\n\nANIMATION:\n- Logo fades in smoothly\n- Text appears with gentle slide-up effect\n- Subscribe button has subtle pulse animation\n- Professional, clean transitions\n\nBRANDING:\n- Channel name: \"Guidora Mindfulness\"\n- Consistent with YouTube branding standards\n- Encourages engagement without being pushy\n",
+      "voice_script": "\"Thank you for watching!\" [pause] \"Like, Share & Subscribe for more inspirational content\"",
+      "visual_elements": [
+        "Channel logo (center)",
+        "Thank you message",
+        "Subscribe call-to-action",
+        "Like and Share icons",
+        "Channel name"
+      ]
+    },
+    "duration_seconds": 6,
+    "assets_needed": [
+      "Channel logo PNG (transparent background)",
+      "Subscribe button icon",
+      "Like icon",
+      "Share icon"
+    ]
+  },
+  "es": {
+    "video_id": "generic_outro_es",
+    "language": "es",
+    "script": "\n[OUTRO SEGMENT - 6 seconds]\n\nVISUAL: \n- Channel logo appears center-screen (25% width)\n- Dark background (#1a1a1a)\n- Smooth fade_in animation\n\nAUDIO & TEXT:\n\"¡Gracias por ver!\"\n\n[PAUSE 1 second]\n\n\"Dale like, comparte y suscríbete para más contenido inspirador\"\n\nVISUAL ELEMENTS:\n- Subscribe button animation (YouTube red)\n- Like and Share icons with gentle pulse effect\n- Channel name: \"Guidora Mindfulness\"\n\n[END OUTRO]\n",
+    "instadoodle_instructions": {
+      "duration": "6 seconds",
+      "scene_description": "\nCreate a professional outro scene with:\n\nBACKGROUND:\n- Solid dark background (#1a1a1a)\n- Clean, minimalist design\n\nMAIN ELEMENTS:\n1. Channel logo (centered, prominent)\n2. Text: \"¡Gracias por ver!\" (appears first)\n3. Text: \"Dale like, comparte y suscríbete para más contenido inspirador\" (appears after 1 second)\n4. Subscribe button visual (YouTube red color)\n5. Like and Share icons\n\nANIMATION:\n- Logo fades in smoothly\n- Text appears with gentle slide-up effect\n- Subscribe button has subtle pulse animation\n- Professional, clean transitions\n\nBRANDING:\n- Channel name: \"Guidora Mindfulness\"\n- Consistent with YouTube branding standards\n- Encourages engagement without being pushy\n",
+      "voice_script": "\"¡Gracias por ver!\" [pause] \"Dale like, comparte y suscríbete para más contenido inspirador\"",
+      "visual_elements": [
+        "Channel logo (center)",
+        "Thank you message",
+        "Subscribe call-to-action",
+        "Like and Share icons",
+        "Channel name"
+      ]
+    },
+    "duration_seconds": 6,
+    "assets_needed": [
+      "Channel logo PNG (transparent background)",
+      "Subscribe button icon",
+      "Like icon",
+      "Share icon"
+    ]
+  },
+  "fr": {
+    "video_id": "generic_outro_fr",
+    "language": "fr",
+    "script": "\n[OUTRO SEGMENT - 6 seconds]\n\nVISUAL: \n- Channel logo appears center-screen (25% width)\n- Dark background (#1a1a1a)\n- Smooth fade_in animation\n\nAUDIO & TEXT:\n\"Merci d'avoir regardé !\"\n\n[PAUSE 1 second]\n\n\"Aimez, partagez et abonnez-vous pour plus de contenu inspirant\"\n\nVISUAL ELEMENTS:\n- Subscribe button animation (YouTube red)\n- Like and Share icons with gentle pulse effect\n- Channel name: \"Guidora Mindfulness\"\n\n[END OUTRO]\n",
+    "instadoodle_instructions": {
+      "duration": "6 seconds",
+      "scene_description": "\nCreate a professional outro scene with:\n\nBACKGROUND:\n- Solid dark background (#1a1a1a)\n- Clean, minimalist design\n\nMAIN ELEMENTS:\n1. Channel logo (centered, prominent)\n2. Text: \"Merci d'avoir regardé !\" (appears first)\n3. Text: \"Aimez, partagez et abonnez-vous pour plus de contenu inspirant\" (appears after 1 second)\n4. Subscribe button visual (YouTube red color)\n5. Like and Share icons\n\nANIMATION:\n- Logo fades in smoothly\n- Text appears with gentle slide-up effect\n- Subscribe button has subtle pulse animation\n- Professional, clean transitions\n\nBRANDING:\n- Channel name: \"Guidora Mindfulness\"\n- Consistent with YouTube branding standards\n- Encourages engagement without being pushy\n",
+      "voice_script": "\"Merci d'avoir regardé !\" [pause] \"Aimez, partagez et abonnez-vous pour plus de contenu inspirant\"",
+      "visual_elements": [
+        "Channel logo (center)",
+        "Thank you message",
+        "Subscribe call-to-action",
+        "Like and Share icons",
+        "Channel name"
+      ]
+    },
+    "duration_seconds": 6,
+    "assets_needed": [
+      "Channel logo PNG (transparent background)",
+      "Subscribe button icon",
+      "Like icon",
+      "Share icon"
+    ]
+  },
+  "ur": {
+    "video_id": "generic_outro_ur",
+    "language": "ur",
+    "script": "\n[OUTRO SEGMENT - 6 seconds]\n\nVISUAL: \n- Channel logo appears center-screen (25% width)\n- Dark background (#1a1a1a)\n- Smooth fade_in animation\n\nAUDIO & TEXT:\n\"دیکھنے کا شکریہ!\"\n\n[PAUSE 1 second]\n\n\"مزید متاثرکن مواد کے لیے لائک، شیئر اور سبسکرائب کریں\"\n\nVISUAL ELEMENTS:\n- Subscribe button animation (YouTube red)\n- Like and Share icons with gentle pulse effect\n- Channel name: \"Guidora Mindfulness\"\n\n[END OUTRO]\n",
+    "instadoodle_instructions": {
+      "duration": "6 seconds",
+      "scene_description": "\nCreate a professional outro scene with:\n\nBACKGROUND:\n- Solid dark background (#1a1a1a)\n- Clean, minimalist design\n\nMAIN ELEMENTS:\n1. Channel logo (centered, prominent)\n2. Text: \"دیکھنے کا شکریہ!\" (appears first)\n3. Text: \"مزید متاثرکن مواد کے لیے لائک، شیئر اور سبسکرائب کریں\" (appears after 1 second)\n4. Subscribe button visual (YouTube red color)\n5. Like and Share icons\n\nANIMATION:\n- Logo fades in smoothly\n- Text appears with gentle slide-up effect\n- Subscribe button has subtle pulse animation\n- Professional, clean transitions\n\nBRANDING:\n- Channel name: \"Guidora Mindfulness\"\n- Consistent with YouTube branding standards\n- Encourages engagement without being pushy\n",
+      "voice_script": "\"دیکھنے کا شکریہ!\" [pause] \"مزید متاثرکن مواد کے لیے لائک، شیئر اور سبسکرائب کریں\"",
+      "visual_elements": [
+        "Channel logo (center)",
+        "Thank you message",
+        "Subscribe call-to-action",
+        "Like and Share icons",
+        "Channel name"
+      ]
+    },
+    "duration_seconds": 6,
+    "assets_needed": [
+      "Channel logo PNG (transparent background)",
+      "Subscribe button icon",
+      "Like icon",
+      "Share icon"
+    ]
+  },
+  "ar": {
+    "video_id": "generic_outro_ar",
+    "language": "ar",
+    "script": "\n[OUTRO SEGMENT - 6 seconds]\n\nVISUAL: \n- Channel logo appears center-screen (25% width)\n- Dark background (#1a1a1a)\n- Smooth fade_in animation\n\nAUDIO & TEXT:\n\"شكراً لك على المشاهدة!\"\n\n[PAUSE 1 second]\n\n\"اضغط إعجاب، شارك واشترك للمزيد من المحتوى الملهم\"\n\nVISUAL ELEMENTS:\n- Subscribe button animation (YouTube red)\n- Like and Share icons with gentle pulse effect\n- Channel name: \"Guidora Mindfulness\"\n\n[END OUTRO]\n",
+    "instadoodle_instructions": {
+      "duration": "6 seconds",
+      "scene_description": "\nCreate a professional outro scene with:\n\nBACKGROUND:\n- Solid dark background (#1a1a1a)\n- Clean, minimalist design\n\nMAIN ELEMENTS:\n1. Channel logo (centered, prominent)\n2. Text: \"شكراً لك على المشاهدة!\" (appears first)\n3. Text: \"اضغط إعجاب، شارك واشترك للمزيد من المحتوى الملهم\" (appears after 1 second)\n4. Subscribe button visual (YouTube red color)\n5. Like and Share icons\n\nANIMATION:\n- Logo fades in smoothly\n- Text appears with gentle slide-up effect\n- Subscribe button has subtle pulse animation\n- Professional, clean transitions\n\nBRANDING:\n- Channel name: \"Guidora Mindfulness\"\n- Consistent with YouTube branding standards\n- Encourages engagement without being pushy\n",
+      "voice_script": "\"شكراً لك على المشاهدة!\" [pause] \"اضغط إعجاب، شارك واشترك للمزيد من المحتوى الملهم\"",
+      "visual_elements": [
+        "Channel logo (center)",
+        "Thank you message",
+        "Subscribe call-to-action",
+        "Like and Share icons",
+        "Channel name"
+      ]
+    },
+    "duration_seconds": 6,
+    "assets_needed": [
+      "Channel logo PNG (transparent background)",
+      "Subscribe button icon",
+      "Like icon",
+      "Share icon"
+    ]
+  }
+}
