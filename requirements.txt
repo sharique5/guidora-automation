@@ -1,0 +1,24 @@
+# Guidora Video Automation Requirements
+# Core dependencies for story generation, translation, and video production
+
+# HTTP requests and API interactions
+requests>=2.31.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Data processing and analysis
+pandas>=2.0.0
+
+# Image processing (for thumbnail generation)
+Pillow>=10.0.0
+
+# OpenAI API (for story generation, translation, and DALL-E thumbnails)
+openai>=1.0.0
+
+# Date and time utilities
+python-dateutil>=2.8.2
+
+# Optional: Additional AI providers for thumbnails
+# stability-sdk>=0.8.0    # Stability AI (uncomment if using)
+# google-generativeai     # Google Gemini (uncomment if using)
