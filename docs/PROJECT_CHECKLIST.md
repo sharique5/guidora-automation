@@ -34,29 +34,51 @@
 - [x] **Batch Processing**: CLI tool for processing multiple stories (`scripts/audio_generator.py`)
 - [x] **Output**: High-quality audio files (367.7s content) from generated stories ($0.0142 cost)
 
-### **🎬 Week 4: Video Assembly MVP**
-- [ ] **Video Engine**: FFmpeg/MoviePy integration (`lib/video_tools/video_assembler.py`)
-- [ ] **Visual Assets**: Background images, text overlays, transitions
-- [ ] **Slideshow Builder**: Auto-sync visuals with audio timing
-- [ ] **Template System**: Consistent branding and layout
-- [ ] **Quality Control**: 1080p output with optimized encoding
-- [ ] **Output**: Complete video files ready for upload
+## Week 4: Multi-Language Video Assembly (Instadoodle Strategy) 🎬
 
-### **📺 Week 5: YouTube Publisher MVP**
-- [ ] **YouTube API**: OAuth device flow integration (`lib/video_tools/youtube_uploader.py`)
-- [ ] **Metadata Generation**: Auto-generated titles, descriptions, tags
-- [ ] **Upload Pipeline**: Automated video publishing with retry logic
-- [ ] **Playlist Management**: Auto-categorization by audience/theme
-- [ ] **Publishing Logs**: Idempotent tracking and error handling
-- [ ] **Output**: Automated YouTube uploads with proper metadata
+### A) Enhanced Natural Language Translator ✅ COMPLETED
+- [x] **Whiteboard-Optimized Script Generation** - Enhanced translator for clean, narration-ready scripts
+- [x] **Short Sentence Structure** - 10-15 words maximum for visual pacing
+- [x] **Cultural Adaptation** - Native expressions and slang per language
+- [x] **Clean JSON Output** - No nested formatting, direct script field
+- [x] **Quality Validation** - Script readability scoring and whiteboard readiness check
+- [x] **Multi-Language Support** - Spanish, French, Urdu with regional authenticity
 
-### **⚙️ Week 6: Full Automation & GitHub Actions**
-- [ ] **GitHub Workflows**: Weekly processing automation (`.github/workflows/`)
-- [ ] **State Management**: Progress tracking across automation runs
-- [ ] **Error Handling**: Comprehensive failure recovery and notifications
-- [ ] **Monitoring**: Structured logging and performance metrics
-- [ ] **Cost Tracking**: API usage and budget monitoring
-- [ ] **Output**: Fully automated weekly content generation
+**Results:**
+- ✅ Spanish translations with "carro", "coche" and natural expressions
+- ✅ French translations with "bagnole", "voiture" and cultural nuances  
+- ✅ Urdu translations with "mashallah", "subhanallah", "yaar" integration
+- ✅ Average cost: ~$0.03 per story translation across all languages
+- ✅ Quality scores: 8-10/10 readability, all languages whiteboard-ready
+- ✅ Duration estimation: 76-285 seconds depending on language density
+
+### B) Video Storage Organization 🔄 IN PROGRESS
+- [ ] **Multi-Language Directory Structure** - Organize videos by language and story
+- [ ] **Instadoodle Integration Points** - Define manual video creation workflow
+- [ ] **Metadata Management** - Track video creation status per language
+- [ ] **Quality Control Pipeline** - Validation before YouTube upload
+
+### C) YouTube Multi-Channel Strategy 📺 PLANNED
+- [ ] **Language-Specific Channels** - Dedicated channels per language  
+- [ ] **Automated Upload Scheduling** - Coordinated releases across languages
+- [ ] **Cross-Language Linking** - Connect related videos across channels
+- [ ] **Analytics Integration** - Track performance per language market
+
+### **🎬 Week 5: Video Production & Multi-Channel Publishing MVP**
+- [ ] **Video Organization System**: File management for videos by language and channel (`lib/video_tools/video_organizer.py`)
+- [ ] **Multi-Language Thumbnails**: AI-generated thumbnails with language-specific text and cultural elements
+- [ ] **Multi-Channel YouTube Setup**: Separate channels for different languages with proper branding
+- [ ] **Batch Upload Pipeline**: Automated publishing across multiple language channels
+- [ ] **Cross-Language SEO**: Optimized metadata for different regional markets
+- [ ] **Output**: Organized multi-language video library with automated publishing
+
+### **⚙️ Week 6: Global Automation & Analytics**
+- [ ] **Multi-Language Workflows**: GitHub Actions for automated translation and formatting
+- [ ] **Global Content Strategy**: Regional optimization and cultural sensitivity checks
+- [ ] **Cross-Platform Analytics**: Performance tracking across language channels
+- [ ] **Scalability Testing**: Load testing for multiple language processing
+- [ ] **Cost Optimization**: Budget management for global content production
+- [ ] **Output**: Fully automated global content generation system
 
 ---
 
@@ -75,45 +97,46 @@
 - [ ] **Quality Control**: Content validation and tone consistency
 
 ### **C. Media Production**
-- [ ] **Text-to-Speech**: Natural voice synthesis with emotional inflection
-- [ ] **Video Assembly**: Automated slideshow creation with visual assets
-- [ ] **Audio Processing**: Background music, normalization, quality optimization
-- [ ] **Visual Design**: Consistent branding, thumbnails, and overlays
+- [x] **Text-to-Speech**: Natural voice synthesis (OpenAI TTS) - *Paused for Instadoodle integration*
+- [ ] **Multi-Language Translation**: Conversational translations with cultural adaptation
+- [ ] **Whiteboard Animation**: Instadoodle-based explainer video creation (manual process)
+- [ ] **Visual Consistency**: Standardized branding across language versions
+- [ ] **Video Organization**: Systematic storage and management by language
 
 ### **D. Publishing & Distribution**
-- [ ] **YouTube Integration**: Automated uploads with metadata optimization
-- [ ] **Content Scheduling**: Strategic timing for maximum engagement
-- [ ] **Analytics Tracking**: Performance monitoring and optimization
-- [ ] **Multi-Platform**: Expandable to other platforms (Instagram, TikTok)
+- [ ] **Multi-Channel YouTube**: Automated uploads across language-specific channels
+- [ ] **Global SEO Optimization**: Region-specific metadata and cultural adaptation
+- [ ] **Cross-Language Analytics**: Performance tracking across different markets
+- [ ] **Content Localization**: Strategic timing and cultural considerations per region
 
 ---
 
 ## 🎯 **Production Milestones**
 
 ### **MVP Completion (Week 6)**
-**Goal**: End-to-end automation generating weekly content
+**Goal**: End-to-end global automation generating weekly multi-language content
 - ✅ Learning extraction from Quranic wisdom
-- ✅ AI-powered story generation
-- 📝 High-quality TTS audio production
-- 🎬 Automated video assembly
-- 📺 YouTube publishing pipeline
-- ⚙️ GitHub Actions automation
+- ✅ AI-powered story generation (English)
+- 🌍 Natural language translation (Spanish, French, Hindi, Arabic)
+- 🎬 Instadoodle whiteboard explainer creation (manual)
+- 📺 Multi-channel YouTube publishing pipeline
+- ⚙️ Global automation with cultural adaptation
 
 ### **V1.0 (Week 8-10)**
-**Goal**: Production-ready with quality controls
-- [ ] **Reviewer Interface**: Human oversight for content approval
-- [ ] **Content Policy**: Automated checks for appropriateness
-- [ ] **Multi-Language**: Full EN/UR/HI support with cultural adaptation
-- [ ] **Advanced Analytics**: Detailed performance tracking and optimization
-- [ ] **Cost Optimization**: Efficient API usage and budget controls
+**Goal**: Production-ready global content system with quality controls
+- [ ] **Content Review Interface**: Human oversight for multi-language content approval
+- [ ] **Cultural Sensitivity**: Automated checks for regional appropriateness
+- [ ] **Advanced Translation**: Context-aware localization with cultural nuance
+- [ ] **Global Analytics**: Detailed performance tracking across markets
+- [ ] **Cost Optimization**: Efficient translation and storage management
 
 ### **V1.1 (Week 12-16)**
-**Goal**: Growth and optimization features
-- [ ] **YouTube Shorts**: Vertical format auto-generation
-- [ ] **A/B Testing**: Title, thumbnail, and content optimization
-- [ ] **Advanced Targeting**: Personalized content for audience segments
-- [ ] **Performance Analytics**: Data-driven content improvement
-- [ ] **Multi-Platform**: Expansion to Instagram, TikTok, Facebook
+**Goal**: Global growth and advanced localization features
+- [ ] **Regional YouTube Shorts**: Vertical format with language-specific optimization
+- [ ] **Cultural A/B Testing**: Region-specific content optimization
+- [ ] **Advanced Localization**: AI-powered cultural adaptation and regional preferences
+- [ ] **Global Performance Analytics**: Cross-market data analysis and insights
+- [ ] **Multi-Platform Expansion**: Instagram, TikTok, Facebook with regional focus
 
 ---
 
@@ -133,21 +156,21 @@
 ```
 
 ### **Week 4 Priorities**
-1. **Video Engine Setup** - FFmpeg/MoviePy integration for video assembly
-2. **Visual Assets** - Background images, text overlays, and transitions
-3. **Slideshow Builder** - Auto-sync visuals with generated audio timing
-4. **Template System** - Consistent branding and layout framework
-5. **Quality Control** - 1080p output with optimized encoding
+1. **Natural Language Translator** - Build conversational translation system for Spanish, French, Hindi, Arabic
+2. **Instadoodle Script Formatting** - Create whiteboard explainer format from story content
+3. **Multi-Language Storage** - Organize translated stories by language for easy management
+4. **Cultural Adaptation** - Ensure translations use natural slang and regional context
+5. **Manual Video Workflow** - Document step-by-step Instadoodle creation process
 
 ### **Critical Dependencies**
-- [x] **API Keys**: OpenAI for story generation (configured and tested)
+- [x] **API Keys**: OpenAI for story generation and translation (configured and tested)
 - [x] **Storage Setup**: Organized file structure for generated content
 - [x] **Prompt Engineering**: Templates for consistent, high-quality output
 - [x] **Error Handling**: Robust failure recovery and retry logic
-- [x] **TTS Integration**: OpenAI TTS with platform-agnostic provider system
-- [x] **Audio Processing**: Real MP3 generation with cost tracking and metadata
-- [ ] **Additional TTS APIs**: ElevenLabs/Google for provider diversity (optional)
-- [ ] **Video Processing**: FFmpeg for video assembly and optimization
+- [x] **TTS Integration**: OpenAI TTS (paused for Instadoodle integration)
+- [ ] **Translation API**: Multi-language support with cultural adaptation
+- [ ] **Instadoodle Account**: Premium subscription for whiteboard video creation
+- [ ] **Multi-Channel Setup**: YouTube channels for different languages
 
 ---
 
@@ -163,18 +186,27 @@
 │   ├── ✅ fingerprints.py       # Uniqueness detection
 │   ├── ✅ weekly_cadence.py     # Batch processing
 │   ├── ✅ llm_tools.py          # Week 2: LLM integration
-│   ├── ✅ tts_manager.py        # Week 3: TTS orchestration
+│   ├── ✅ tts_manager.py        # Week 3: TTS orchestration (paused)
+│   ├── 📝 translators/
+│   │   └── 📝 natural_translator.py # Week 4: Multi-language translation
 │   ├── ✅ providers/
-│   │   ├── ✅ tts_api.py        # Week 3: TTS providers
+│   │   ├── ✅ tts_api.py        # Week 3: TTS providers (paused)
 │   │   └── 📝 storage_client.py # Cloud storage
 │   └── 📝 video_tools/
-│       ├── 📝 video_assembler.py # Week 4: Video creation
-│       └── 📝 youtube_uploader.py # Week 5: Publishing
+│       ├── 📝 instadoodle_formatter.py # Week 4: Whiteboard script format
+│       ├── 📝 video_organizer.py # Week 5: Multi-language video management
+│       └── 📝 youtube_uploader.py # Week 5: Multi-channel publishing
 ├── 📁 data/
 │   ├── ✅ tafsir/quran_filtered.jsonl # Source data
 │   ├── ✅ learnings/learnings.jsonl   # Extracted wisdom
 │   ├── ✅ videos/videos.jsonl         # Generated stories with metadata
-│   └── ✅ audio/files/                # Week 3: Generated audio files
+│   ├── ✅ audio/files/                # Week 3: Generated audio files (paused)
+│   └── 📝 stories/                    # Week 4: Multi-language stories
+│       ├── 📝 en/                     # English stories
+│       ├── 📝 es/                     # Spanish stories
+│       ├── 📝 fr/                     # French stories
+│       ├── 📝 ur/                     # Urdu stories
+│       └── 📝 ar/                     # Arabic stories
 ├── 📁 prompts/
 │   ├── ✅ story_universal.txt    # Week 2: Universal audience
 │   ├── ✅ story_muslim.txt       # Week 2: Muslim community
