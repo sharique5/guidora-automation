@@ -86,12 +86,6 @@ class ThumbnailGenerator:
                 "color_preference": "green_gold",
                 "cultural_elements": "geometric patterns",
                 "text_position": "top_center"
-            },
-            "ar": {
-                "font_style": "calligraphic",
-                "color_preference": "gold_deep_blue",
-                "cultural_elements": "arabesque patterns",
-                "text_position": "top_center"
             }
         }
         

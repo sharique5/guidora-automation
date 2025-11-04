@@ -63,11 +63,6 @@ class BrandingOutro:
                 "main_text": "دیکھنے کا شکریہ!",
                 "subscribe_text": "مزید متاثرکن مواد کے لیے لائک، شیئر اور سبسکرائب کریں",
                 "channel_name": "Guidora Mindfulness"
-            },
-            "ar": {
-                "main_text": "شكراً لك على المشاهدة!",
-                "subscribe_text": "اضغط إعجاب، شارك واشترك للمزيد من المحتوى الملهم",
-                "channel_name": "Guidora Mindfulness"
             }
         }
     
