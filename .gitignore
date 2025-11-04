@@ -1,6 +1,9 @@
 # Guidora Automation - Media Files and Production Assets
 # =====================================================
 
+# Generated Thumbnails (large files, manual Instadoodle creation)
+assets/thumbnails/*
+
 # Generated Videos (large files, manual Instadoodle creation)
 data/videos/production/*.mp4
 data/videos/production/*.mov  
