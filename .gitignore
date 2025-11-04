@@ -5,6 +5,8 @@
 data/videos/production/*.mp4
 data/videos/production/*.mov  
 data/videos/production/*.avi
+data/videos/production/*/*.mp4
+
 data/videos/drafts/*.mp4
 data/videos/drafts/*.mov
 data/videos/published/*.mp4
