@@ -1,0 +1,101 @@
+**Create comprehensive YouTube metadata with integrated branding elements for this story:**
+
+Story: "{story_content}"
+
+**Generate the following for YouTube optimization and production:**
+
+**TITLE** (60 characters max):
+Create an engaging, click-worthy title that:
+- Includes emotional hooks or curiosity gaps
+- Uses power words (transform, discover, secret, simple, etc.)
+- Targets the main audience 
+- Avoids clickbait but maintains intrigue
+- Consider formats like:
+  * "How [Action] Changed Everything"
+  * "The Simple [Thing] That [Result]"
+  * "[Number] Minutes That [Transformation]"
+  * "Why [Everyone] Should [Action]"
+
+**DESCRIPTION** (125 words max):
+Write a compelling description that:
+- Summarizes the key insight in 1-2 sentences
+- Mentions the transformation or benefit
+- Includes engagement call-to-action
+- Uses relevant keywords naturally
+- Ends with questions to encourage comments
+- Mentions subscribing for more wisdom content
+
+**TAGS** (10-15 tags):
+Generate relevant tags including:
+- Main theme keywords (wisdom, inspiration, personal growth)
+- Audience-specific terms (spiritual, motivation, life lessons)
+- Content type (story, parable, life advice)
+- Emotional keywords (peace, happiness, success)
+- Demographic terms if applicable
+
+**VIDEO PRODUCTION ELEMENTS:**
+
+**MAIN STORY SCRIPT** (140-160 seconds):
+Break down the story into short segments optimized for whiteboard animation:
+- 10-15 words per visual scene
+- Natural pause points for drawing emphasis
+- Emotional beats clearly marked
+- Voice-over friendly pacing
+
+**CALL-TO-ACTION SLIDE SCRIPT** (5-7 seconds):
+"Thank you for watching! If this story resonated with you, please like this video and subscribe for more inspiring wisdom. Share it with someone who might need this message today."
+
+**BRANDING OUTRO SCRIPT** (3-5 seconds):
+"[Channel Name] - Wisdom for Modern Life. Where ancient insights meet contemporary challenges."
+
+**VISUAL INSTRUCTIONS:**
+
+**CTA Slide Elements:**
+- Background: Soft gradient matching story theme
+- Channel logo: Centered, 25% of frame width
+- Like button icon: Bottom left with gentle pulse animation
+- Subscribe button: YouTube red (#FF0000), prominent placement
+- Share icon: Bottom right with subtle glow effect
+- Text: Clean, readable font (Arial/Roboto), white text with subtle shadow
+
+**Branding Slide Elements:**
+- Background: Minimalist design with channel brand colors
+- Logo: Larger display (40% frame width), center placement
+- Tagline: Elegant typography below logo
+- Subtle motion: Gentle fade-in effects, no distracting animations
+- Color scheme: Professional and calming
+
+**THUMBNAIL CONCEPT** (2-3 sentences):
+Describe visual elements for thumbnail:
+- Key emotional moment from story
+- Color scheme matching video branding
+- Text overlay that complements title
+- Character representation
+- Professional, click-worthy design
+
+**TARGET KEYWORDS** (5-7 keywords):
+List primary SEO keywords this video should rank for
+
+**AUDIENCE INSIGHTS** (3-4 sentences):
+Describe who would most connect with this content and why
+
+**PRODUCTION TIMELINE:**
+- Story segments with timing markers
+- CTA slide timing: [Story End + 0:00]
+- Branding outro timing: [CTA End + 0:00]
+- Total video length estimate
+- Recommended thumbnail creation approach
+
+**ENGAGEMENT OPTIMIZATION:**
+- Key moments to encourage likes/comments
+- Strategic pause points for viewer retention
+- Hook strength analysis
+- Retention curve predictions
+
+**BRANDING CONSISTENCY:**
+- Channel voice and tone alignment
+- Visual brand element integration
+- Series/playlist connection potential
+- Cross-video promotion opportunities
+
+Generate all metadata and production elements following these comprehensive guidelines.

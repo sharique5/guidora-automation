@@ -61,22 +61,41 @@ class StoryGenerator:
             os.makedirs(os.path.join(output_dir, subdir), exist_ok=True)
     
     def _load_prompts(self) -> Dict[str, str]:
-        """Load all prompt templates."""
+        """Load all prompt templates with enhanced branding support."""
         prompts = {}
         prompt_files = {
-            'universal': 'prompts/story_universal.txt',
+            'universal': 'prompts/story_universal_enhanced.txt',
+            'universal_fallback': 'prompts/story_universal.txt',
             'muslim': 'prompts/story_muslim.txt',
             'spiritual': 'prompts/story_spiritual.txt',
-            'metadata': 'prompts/youtube_metadata.txt'
+            'metadata': 'prompts/youtube_metadata_enhanced.txt',
+            'metadata_fallback': 'prompts/youtube_metadata.txt'
         }
         
         for key, filepath in prompt_files.items():
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     prompts[key] = f.read().strip()
+                    if 'enhanced' in key:
+                        print(f"✅ Loaded enhanced prompt: {key}")
             except FileNotFoundError:
-                print(f"⚠️ Warning: Prompt file {filepath} not found")
-                prompts[key] = "Generate a story for: {practical_application}"
+                if 'enhanced' in key:
+                    # Try fallback to original prompt
+                    fallback_key = key.replace('_enhanced', '_fallback')
+                    if fallback_key in prompt_files:
+                        try:
+                            with open(prompt_files[fallback_key], 'r', encoding='utf-8') as f:
+                                prompts[key] = f.read().strip()
+                                print(f"⚠️ Using fallback prompt for {key}")
+                        except FileNotFoundError:
+                            print(f"❌ Neither enhanced nor fallback prompt found for {key}")
+                            prompts[key] = "Generate enhanced content for: {practical_application}"
+                    else:
+                        print(f"⚠️ Warning: Enhanced prompt file {filepath} not found")
+                        prompts[key] = "Generate enhanced content for: {practical_application}"
+                else:
+                    print(f"⚠️ Warning: Prompt file {filepath} not found")
+                    prompts[key] = "Generate a story for: {practical_application}"
         
         return prompts
     
@@ -294,6 +313,101 @@ class StoryGenerator:
         print(f"   ✅ Generated {duration}s story with {story_response.tokens_used + metadata_response.tokens_used} tokens")
         return story
     
+    def generate_enhanced_story_with_branding(self, learning: Dict, target_audience: Optional[str] = None) -> Story:
+        """Generate enhanced story with integrated branding and CTA elements."""
+        print(f"🎬 Generating ENHANCED story with branding for learning: {learning['id']}")
+        
+        # Determine category and audience
+        category = self._categorize_learning(learning)
+        audience = target_audience or self._select_target_audience(learning)
+        
+        # Use enhanced prompts if available
+        prompt_key = {
+            'universal': 'universal',
+            'muslim_community': 'muslim',
+            'spiritual_seekers': 'spiritual'
+        }.get(audience, 'universal')
+        
+        # Generate enhanced story content with branding
+        story_prompt = self.prompts[prompt_key].format(
+            practical_application=learning['practical_application']
+        )
+        
+        print(f"   🎨 Using ENHANCED {prompt_key} template for {audience} audience")
+        print(f"   ✨ Including: CTA slide + Branding outro + Visual instructions")
+        
+        story_response = self.llm_manager.generate(story_prompt)
+        
+        # Parse enhanced story structure
+        story_data = self._parse_llm_story_response(story_response.content)
+        
+        # Generate enhanced YouTube metadata with branding
+        metadata_prompt = self.prompts['metadata'].format(
+            story_content=story_data['content']
+        )
+        
+        print(f"   📊 Generating enhanced metadata with production timeline...")
+        metadata_response = self.llm_manager.generate(metadata_prompt)
+        metadata = self._parse_metadata_response(metadata_response.content)
+        
+        # Enhanced duration calculation (includes CTA + branding)
+        base_duration = self._estimate_duration(story_data['content'])
+        enhanced_duration = base_duration + 7 + 5  # Main story + CTA slide + Branding outro
+        
+        # Create enhanced story ID
+        story_id = f"enhanced_story_{learning.get('chapter_id', 'unknown')}_{learning.get('verse_number', '000')}_{audience}_{hashlib.md5(story_data['content'].encode()).hexdigest()[:8]}"
+        
+        # Create enhanced story with all production elements
+        story = Story(
+            id=story_id,
+            source_learning_id=learning['id'],
+            title=story_data['title'],
+            description=story_data['description'],
+            content=story_data['content'],
+            category=category,
+            target_audience=audience,
+            estimated_duration=enhanced_duration,
+            themes=story_data.get('themes', ['wisdom', 'personal_growth']),
+            characters=story_data.get('characters', ['professional']),
+            setting=story_data.get('setting', 'modern_urban'),
+            youtube_title=metadata['youtube_title'],
+            youtube_description=metadata['youtube_description'],
+            youtube_tags=metadata['youtube_tags'],
+            thumbnail_concept=metadata['thumbnail_concept'],
+            target_keywords=metadata['target_keywords'],
+            generation_metadata={
+                'story_tokens': story_response.tokens_used,
+                'metadata_tokens': metadata_response.tokens_used,
+                'total_cost': story_response.cost_estimate + metadata_response.cost_estimate,
+                'model_used': story_response.model,
+                'prompt_type': prompt_key,
+                'enhanced_features': True,
+                'branding_integration': True,
+                'video_structure': {
+                    'main_story_duration': base_duration,
+                    'cta_slide_duration': 7,
+                    'branding_outro_duration': 5,
+                    'total_duration': enhanced_duration
+                },
+                'production_elements': {
+                    'cta_slide_included': True,
+                    'branding_outro_included': True,
+                    'visual_instructions_included': True,
+                    'engagement_optimization': True
+                }
+            },
+            generated_at=datetime.now().isoformat()
+        )
+        
+        print(f"   ✅ Generated ENHANCED {enhanced_duration}s story:")
+        print(f"      📺 Main story: {base_duration}s")
+        print(f"      👍 CTA slide: 7s (like, subscribe, share)")
+        print(f"      🏷️ Branding outro: 5s (channel tagline)")
+        print(f"      🎯 Total tokens: {story_response.tokens_used + metadata_response.tokens_used}")
+        print(f"      💰 Cost: ${story_response.cost_estimate + metadata_response.cost_estimate:.4f}")
+        
+        return story
+    
     def save_story(self, story: Story):
         """Save story to JSONL files."""
         story_json = json.dumps(asdict(story), ensure_ascii=False)
@@ -352,6 +466,56 @@ class StoryGenerator:
         
         return stories
     
+    def generate_enhanced_stories_from_learnings(self, limit: Optional[int] = None) -> List[Story]:
+        """Generate enhanced stories with branding from all available learnings."""
+        stories = []
+        
+        print(f"🚀 Generating ENHANCED stories with branding from {self.learnings_file}")
+        
+        with open(self.learnings_file, 'r', encoding='utf-8') as f:
+            learnings = []
+            for line in f:
+                if line.strip():
+                    learnings.append(json.loads(line))
+        
+        print(f"📚 Found {len(learnings)} learnings to process with enhanced features")
+        
+        if limit:
+            learnings = learnings[:limit]
+            print(f"🎯 Processing first {limit} learnings for enhanced generation")
+        
+        for i, learning in enumerate(learnings, 1):
+            print(f"\n📖 Processing learning {i}/{len(learnings)}: {learning.get('title', 'Untitled')}")
+            
+            try:
+                # Generate enhanced story with branding
+                story = self.generate_enhanced_story_with_branding(learning)
+                self.save_story(story)
+                stories.append(story)
+                
+                print(f"   ✅ Enhanced story saved with:")
+                print(f"      🎬 Main content: {story.generation_metadata['video_structure']['main_story_duration']}s")
+                print(f"      👍 CTA slide: {story.generation_metadata['video_structure']['cta_slide_duration']}s")
+                print(f"      🏷️ Branding outro: {story.generation_metadata['video_structure']['branding_outro_duration']}s")
+                print(f"      💰 Cost: ${story.generation_metadata['total_cost']:.4f}")
+                
+            except Exception as e:
+                print(f"   ❌ Error generating enhanced story: {e}")
+                continue
+        
+        # Show enhanced generation summary
+        total_cost = sum(story.generation_metadata['total_cost'] for story in stories)
+        total_tokens = sum(story.generation_metadata['story_tokens'] + story.generation_metadata['metadata_tokens'] for story in stories)
+        total_duration = sum(story.estimated_duration for story in stories)
+        
+        print(f"\n🎉 Generated {len(stories)} ENHANCED stories with branding!")
+        print(f"💰 Total cost: ${total_cost:.4f}")
+        print(f"🔢 Total tokens: {total_tokens}")
+        print(f"⏱️ Total video time: {total_duration/60:.1f} minutes")
+        print(f"✨ Enhanced features: CTA slides + Branding outros + Visual guides")
+        
+        return stories
+    
     def get_generation_stats(self) -> Dict:
         """Get statistics about generated stories."""
         stats = {
@@ -393,14 +557,33 @@ class StoryGenerator:
 
 def main():
     """Main function for testing story generation."""
-    print("🎬 Guidora Story Generation MVP - Week 2")
-    print("=" * 50)
+    print("🎬 Guidora Story Generation MVP - Enhanced with Branding")
+    print("=" * 60)
     
     # Initialize generator
     generator = StoryGenerator()
     
-    # Generate stories from all learnings
-    stories = generator.generate_stories_from_learnings(limit=4)  # Process all 4 learnings
+    # Ask user for generation type
+    print("\n🎯 Choose generation mode:")
+    print("1. Standard story generation (original)")
+    print("2. Enhanced story generation (with CTA + branding)")
+    
+    choice = input("\nEnter choice (1 or 2) [default: 2]: ").strip() or "2"
+    
+    if choice == "2":
+        print("\n🚀 Using ENHANCED generation with branding integration...")
+        # Generate enhanced stories with branding
+        stories = generator.generate_enhanced_stories_from_learnings(limit=4)
+        print(f"\n✨ Enhanced Features Included:")
+        print(f"   • Professional call-to-action slides")
+        print(f"   • Branded outros with channel taglines")
+        print(f"   • Visual instruction guidelines")
+        print(f"   • Production timeline breakdowns")
+        print(f"   • Engagement optimization notes")
+    else:
+        print("\n🚀 Using STANDARD generation...")
+        # Generate standard stories
+        stories = generator.generate_stories_from_learnings(limit=4)
     
     # Show generation statistics
     stats = generator.get_generation_stats()
@@ -416,10 +599,43 @@ def main():
     print(f"   Total requests: {llm_stats['total_requests']}")
     print(f"   Total cost: ${llm_stats['total_cost']:.4f}")
     
+    if choice == "2":
+        print(f"\n🎬 Enhanced Video Production Ready:")
+        print(f"   - Stories include complete production guidelines")
+        print(f"   - CTA slides with like/subscribe/share prompts")
+        print(f"   - Professional branding outros")
+        print(f"   - Visual instruction sets for Instadoodle")
+        print(f"   - Optimized for maximum engagement")
+    
     print(f"\n🎯 Next Steps:")
     print(f"   - Review generated stories in data/stories/")
     print(f"   - Test story quality and engagement")
-    print(f"   - Ready for Week 3: Text-to-Speech Pipeline!")
+    print(f"   - Use enhanced production elements for video creation")
+    print(f"   - Ready for professional video production!")
+
+def main_enhanced_only():
+    """Generate only enhanced stories with branding."""
+    print("🎬 Enhanced Video Generation with Integrated Branding")
+    print("=" * 60)
+    
+    generator = StoryGenerator()
+    
+    # Generate enhanced stories only
+    stories = generator.generate_enhanced_stories_from_learnings(limit=4)
+    
+    # Show statistics
+    stats = generator.get_generation_stats()
+    llm_stats = generator.llm_manager.get_usage_stats()
+    
+    print(f"\n✅ Enhanced Generation Complete!")
+    print(f"📊 Generated {stats['total_stories']} stories with full branding")
+    print(f"💰 Total cost: ${llm_stats['total_cost']:.4f}")
+    print(f"🎬 Total video time: {stats['total_duration']/60:.1f} minutes")
+    print(f"\n🚀 Ready for professional video production with:")
+    print(f"   • Complete production timelines")
+    print(f"   • Professional CTA slides")
+    print(f"   • Branded channel outros")
+    print(f"   • Visual instruction guidelines")
 
 if __name__ == "__main__":
     main()
