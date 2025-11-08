@@ -1,0 +1,46 @@
+{
+  "title": "ہنگامہ خیزی میں سکون کی تلاش: ایک آسان روزانہ کی عادت",
+  "description": "ایک ایسی روزانہ کی عادت دریافت کریں جو آپ کی مصروف زندگی میں امن اور رہنمائی لا سکتی ہے۔",
+  "category": "spiritual_practice",
+  "target_audience": "universal",
+  "estimated_duration": 203,
+  "themes": [
+    "Faith",
+    "Worship",
+    "Guidance"
+  ],
+  "characters": [
+    "professional"
+  ],
+  "setting": "modern_urban",
+  "story_content": "تصور کریں آپ اپنا دن پہلے ہی پچھڑا ہوا محسوس کرتے ہیں۔ ہمارے کردار جیمی سے ملیں، جو ایک مصروف شہر میں سافٹ ویئر ڈویلپر ہیں۔ جیمی کے دن میٹنگز، کوڈنگ سیشنز، اور مسلسل نوٹیفیکیشن کی آوازوں میں گزرتے ہیں۔ جیمی حال ہی میں بہت زیادہ اوور وہیلمڈ محسوس کر رہے ہیں۔ انکشاف ہوتا ہے کہ ایک دوست نے جیمی کو خاموشی اور ذہنی سکون کے لمحات نکالنے کی عادت کے بارے میں بتایا۔ جیمی نے اسے آزمانے کا فیصلہ کیا۔ چند ہفتوں کے بعد، یہ لمحات جیمی کے لیے ایک پناہ گاہ بن گئے۔ جیمی نے محسوس کیا کہ اب وہ زیادہ سکون کے ساتھ کام کرتے ہیں۔ یہ سادہ عمل آپکو روزمرہ کی زندگی کے طوفانوں میں ایک لنگر فراہم کر سکتا ہے۔",
+  "youtube_title": "3 منٹ میں تناؤ کو سکون میں بدلنا: جیمی کی روزانہ کی عادت",
+  "youtube_description": "دیکھیں کہ کیسے جیمی نے ایک سادہ روزانہ کی عادت سے اپنے تناؤ کو سکون میں بدل دیا۔ یہ حوصلہ افزا کہانی زندگی کی ہنگامہ خیزی کو نیویگیٹ کرنے کے لئے ذہنی وقفوں کی طاقت کو اجاگر کرتی ہے۔",
+  "youtube_tags": [],
+  "thumbnail_concept": "The thumbnail features Jamie in a moment of calm reflection, with soft colors and peaceful imagery representing balance and serenity.",
+  "target_keywords": [
+    "daily habits",
+    "stress relief",
+    "mindfulness",
+    "personal growth",
+    "peace"
+  ],
+  "generation_metadata": {
+    "story_tokens": 1396,
+    "metadata_tokens": 2323,
+    "total_cost": 0.11157,
+    "model_used": "gpt-4-turbo",
+    "prompt_type": "universal"
+  },
+  "generated_at": "2025-11-05T18:51:05.815223",
+  "quality_score": 0.0,
+  "translation_metadata": {
+    "target_language": "ur",
+    "language_name": "Urdu",
+    "translated_at": "2025-11-08T12:15:42.947181",
+    "translation_model": "gpt-4-turbo-preview",
+    "cultural_adaptation": true,
+    "original_language": "en",
+    "estimated_cost": 0.022048
+  }
+}
