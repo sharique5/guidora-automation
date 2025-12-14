@@ -14,6 +14,28 @@ import hashlib
 sys.path.append(str(Path(__file__).parent / "lib"))
 from llm_tools import create_default_manager
 
+def get_used_characters():
+    """Get list of characters already used in recent stories."""
+    stories_dir = Path("data/stories/youtube_optimized")
+    used_chars = []
+    
+    if stories_dir.exists():
+        for file in stories_dir.glob("*.json"):
+            try:
+                with open(file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    content = data.get('story_content', '')
+                    # Extract character mentions
+                    if 'Sarah' in content and 'nurse' in content:
+                        used_chars.append('Sarah (night-shift nurse)')
+                    if 'Tom' in content and ('single dad' in content or 'single father' in content):
+                        used_chars.append('Tom (single father)')
+                    # Add more character detection as needed
+            except:
+                continue
+    
+    return list(set(used_chars))  # Remove duplicates
+
 def load_random_learning():
     """Load a random unused learning from the database."""
     learnings_file = Path("data/learnings/learnings.jsonl")
@@ -21,8 +43,14 @@ def load_random_learning():
     with open(learnings_file, 'r', encoding='utf-8') as f:
         learnings = [json.loads(line) for line in f if line.strip()]
     
-    # For now, just get the first one (you can randomize later)
-    return learnings[0] if learnings else None
+    # Get next unused learning
+    # Check how many stories already exist
+    stories_dir = Path("data/stories/youtube_optimized")
+    story_count = len(list(stories_dir.glob("*.json"))) if stories_dir.exists() else 0
+    
+    # Use different learning each time
+    learning_index = min(story_count, len(learnings) - 1)
+    return learnings[learning_index] if learnings else None
 
 def generate_youtube_optimized_story():
     """Generate story with YouTube optimization principles."""
@@ -49,12 +77,25 @@ def generate_youtube_optimized_story():
     # Fill in the practical application
     story_prompt = prompt_template.replace("{practical_application}", learning['practical_application'])
     
+    # Check for used characters
+    used_chars = get_used_characters()
+    
     print(f"\n🎯 Generating with YouTube Best Practices:")
     print(f"   ✓ Hook with pattern interruption (first 3 seconds)")
     print(f"   ✓ Curiosity-driven title (tension + stakes)")
     print(f"   ✓ Diverse character backgrounds")
     print(f"   ✓ Crisis point (not just challenges)")
     print(f"   ✓ Retention hooks throughout")
+    
+    if used_chars:
+        print(f"\n⚠️  Characters already used (MUST use different):")
+        for char in used_chars:
+            print(f"   ❌ {char}")
+        
+        # Add exclusion to prompt
+        exclusion = f"\n\nCRITICAL: DO NOT use these characters (already used in recent videos):\n" + "\n".join([f"- {c}" for c in used_chars])
+        exclusion += "\n\nYou MUST choose a completely different character type from the diverse options list."
+        story_prompt = story_prompt + exclusion
     
     # Generate story
     llm = create_default_manager()
