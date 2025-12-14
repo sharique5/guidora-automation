@@ -1,0 +1,15 @@
+{
+  "id": "youtube_optimized_learning_4_1_91b588ac_7ac9e43b_short_hook_d9114f90",
+  "parent_story_id": "youtube_optimized_learning_4_1_91b588ac_7ac9e43b",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: \"On the Brink: A Teacher's Crisis\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between scenes of a chaotic classroom, a tense parent-teacher meeting, and a serene park setting to contrast the stress and resolution.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n[Text overlay] \"Ever felt like giving EVERYTHING up?\"\n[Action/visual note] Quick flash of a stressed teacher in a noisy classroom.\n\n[0:03-0:08] BUILD\n[Text overlay] \"Emma almost did.\"\n[Text overlay] \"Here's why...\"\n[Action/visual note] Cut to Emma waking up, dreading her day.\n\n[0:08-0:15] TENSION/CURIOSITY\n[Text overlay] \"Chaos in class,\"\n[Text overlay] \"Criticism from parents,\"\n[Text overlay] \"Joy in teaching, lost.\"\n[Action/visual note] Clips of unruly students, a confrontational parent, and Emma's frustrated face.\n\n[0:15-0:20] CRISIS\n[Text overlay] \"Questioning her worth,\"\n[Text overlay] \"Close to quitting.\"\n[Action/visual note] Emma looking defeated during a meeting.\n\n[0:20-0:25] TURNING POINT\n[Text overlay] \"But then...\"\n[Action/visual note] Emma walking in a park, overhearing a conversation.\n\n[0:25-0:30] INSIGHT\n[Text overlay] \"A simple phrase caught her ear.\"\n[Action/visual note] Close-up of Emma’s face, a moment of clarity.\n\n[0:30-0:38] RESOLUTION BUILD\n[Text overlay] \"Change began with a thought.\"\n[Text overlay] \"From chaos to CALM.\"\n[Action/visual note] Transition from chaotic to calm classroom scenes.\n\n[0:38-0:45] PAYOFF + CTA\n[Text overlay] \"How did one phrase save her career?\"\n[Text overlay] \"Find out in the full story. Link in bio!\"\n[Action/visual note] Emma smiling, revitalized classroom in the background.\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:03]: \"EVERYTHING\"\n- [0:08]: \"Chaos,\" \"Criticism,\" \"lost.\"\n- [0:38]: \"CALM.\"\n\n**SUGGESTED MUSIC**: Uplifting, motivational track to enhance the transformation mood.\n\n**THUMBNAIL FRAME**: [0:25] - Emma’s face showing a moment of realization in the park, visually capturing the turning point.\n\nThis script ensures a gripping narrative with a strong emotional arc that encourages viewers to watch the full video for a detailed resolution.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07565999999999999,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2025-12-14T17:54:09.201039"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "youtube_optimized_learning_1_1_b9b9bc1f_2d15ef3d_short_hook_d6040470",
+  "parent_story_id": "youtube_optimized_learning_1_1_b9b9bc1f_2d15ef3d",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: One Mistake Could End It All\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between close-up shots of a nurse's exhausted face, hospital scenes, and serene moments of reflection. Use a muted, blue-toned color scheme for the stressful sequences and warm, soft lighting for moments of calm.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK  \n\"Almost lost everything...\"  \n\"In ONE night.\"  \n[Close-up of Sarah's anxious face, hospital background]\n\n[0:03-0:08] BUILD  \n\"Meet Sarah: Night shift nurse,\"  \n\"Five years of endless stress.\"  \n[Clips of Sarah working through the night, looking visibly tired]\n\n[0:08-0:15] TENSION/CURIOSITY  \n\"One winter evening,\"  \n\"An alarming MEDICATION ERROR.\"  \n[Visual of Sarah realizing her mistake, shock on her face]\n\n[0:15-0:22] CRISIS DEEPENS  \n\"Her career, her integrity,\"  \n\"Everything at RISK.\"  \n[Quick shots of hospital scenes, patient’s room, worried colleagues]\n\n[0:22-0:30] TURNING POINT HINT  \n\"But then, an UNEXPECTED encounter...\"  \n\"An old janitor with an ANCIENT secret.\"  \n[Visual of the elderly janitor approaching Sarah, both talking quietly]\n\n[0:30-0:40] BUILD CURIOSITY  \n\"His simple practice,\"  \n\"Could it SAVE her?\"  \n[Sarah listening intently, nodding, beginning to look hopeful]\n\n[0:40-0:45] PAYOFF + CTA + BRANDING  \n\"Did it work? You won't BELIEVE the change!\"  \n\"More stories → Link in bio\"  \n[GUIDORA branding: \"A Guidora Story\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:08]: \"MEDICATION ERROR\" in bold\n- [0:22]: \"ANCIENT secret\" in italics\n- [0:40]: \"You won't BELIEVE\" in ALL CAPS\n\n**SUGGESTED MUSIC**: A soft, suspenseful instrumental that builds up towards a hopeful tone at the end.\n\n**THUMBNAIL FRAME**: [0:22] - The moment the elderly janitor starts talking to Sarah, a pivotal emotional turning point, capturing both characters in a meaningful interaction.\n\n**CRITICAL REMINDERS**:\n- Emphasize the emotional journey and tension without revealing the solution.\n- Maintain a fast pace with quick visual transitions.\n- End with a clear call to action and branding for maximum engagement.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07877999999999999,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2025-12-14T22:18:04.432003"
+}

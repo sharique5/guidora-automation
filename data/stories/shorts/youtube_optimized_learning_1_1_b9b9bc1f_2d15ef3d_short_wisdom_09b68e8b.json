@@ -1,0 +1,15 @@
+{
+  "id": "youtube_optimized_learning_1_1_b9b9bc1f_2d15ef3d_short_wisdom_09b68e8b",
+  "parent_story_id": "youtube_optimized_learning_1_1_b9b9bc1f_2d15ef3d",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: \"One Mistake Away From Chaos\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between a stressed nurse in a hospital and serene moments of reflection. Use soft, calm colors during reflective scenes, contrasting with the intense, blue-tinged hospital scenes to highlight tension and transformation.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Almost lost EVERYTHING.\"\n[Flash of a nurse looking horrified]\n[Action/visual note: Close-up on Sarah's panicked face in dim hospital lighting]\n\n[0:03-0:08] BUILD\n\"Night shifts breaking her.\"\n[Overlay: Hospital clock hitting 3 AM]\n[Action/visual note: Time-lapse of Sarah working through the night]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Then, one ERROR changed it all.\"\n[Overlay: Sarah's hand shaking, dropping a pill bottle]\n[Action/visual note: Slow-motion of the bottle hitting the floor]\n\n[0:15-0:22] REVELATION\n\"A simple SECRET from an unlikely friend.\"\n[Overlay: Elderly cleaner talking to Sarah]\n[Action/visual note: Sarah listening intently, nodding]\n\n[0:22-0:35] TRANSFORMATION\n\"Moments of prayer, big impact.\"\n[Overlay: Sarah closing her eyes, serene]\n[Action/visual note: Montage of Sarah praying briefly during breaks]\n\n[0:35-0:42] UNIVERSAL MESSAGE\n\"Five minutes of reflection...\"\n[Overlay: Sarah smiling, interacting positively with patients]\n[Action/visual note: Patients responding warmly, hospital atmosphere lighter]\n\n[0:42-0:45] PAYOFF + CTA + BRANDING\n\"...keeps the chaos at bay. 🙏\"\n[Guidora branding: \"A Guidora Story\"]\n[Call to action: \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:08]: \"ERROR\" in bold\n- [0:22]: \"Moments of prayer, BIG impact.\"\n\n**SUGGESTED MUSIC**: Calming yet uplifting instrumental to mirror the transition from tension to tranquility.\n\n**THUMBNAIL FRAME**: [0:02] - Close-up of Sarah's panicked face, highlighting emotional tension, perfect for grabbing attention.\n\nThis script integrates high-impact visuals with a compelling narrative arc, designed to hook viewers immediately, build empathy with the protagonist, and deliver a powerful, relatable insight, ensuring high engagement and prompting viewers to seek more content.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07821,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2025-12-14T22:18:19.498470"
+}

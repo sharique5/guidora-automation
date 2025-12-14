@@ -1,0 +1,15 @@
+{
+  "id": "youtube_optimized_learning_2_1_eeef46ed_302e7cd1_short_hook_48075ed4",
+  "parent_story_id": "youtube_optimized_learning_2_1_eeef46ed_302e7cd1",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: Alone at 3 AM: A Father's Revelation\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Dramatic close-ups of Tom's anxious face interspersed with fleeting, serene visuals of the Quran's pages turning. The contrast between the cold, dark room and the warm, inviting glow of the book creates a visual metaphor for Tom's journey from despair to peace.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK  \n\"3 AM. Alone. Overwhelmed.\"  \n[Close-up: Tom’s anxious face, room dark and shadowy]\n\n[0:03-0:08] BUILD  \n\"Tom, a single dad, at his breaking point.\"  \n[Cut to: Tom looking at his sleeping daughter, worry evident in his eyes]\n\n[0:08-0:15] TENSION/CURIOSITY  \n\"Fear of failing his daughter haunting him.\"  \n[Visual: Tom pacing in the dimly lit room, his face troubled]\n\n[0:15-0:20] CRISIS DEEPENS  \n\"Then, in the despairing silence...\"  \n[A book falls from a shelf, startling Tom]\n\n[0:20-0:25] TURNING POINT  \n\"An old gift he never opened.\"  \n[Visual: Tom picks up the Quran, dust particles dancing in the beam of moonlight]\n\n[0:25-0:30] DISCOVERY  \n\"He reads a passage about hope.\"  \n[Close-up: Tom’s eyes widening, a slight smile forming]\n\n[0:30-0:35] TRANSFORMATION HINT  \n\"Words that whisper strength.\"  \n[Scene: Tom starts to relax, visibly calmer as he reads]\n\n[0:35-0:40] EMOTIONAL SHIFT  \n\"Each night, a verse. Each day, a little brighter.\"  \n[Visual: Quick cuts between night readings and Tom smiling at his daughter in the morning]\n\n[0:40-0:45] PAYOFF + CTA + BRANDING  \n\"Changed by a book? Wait until you see how.\"  \n[Guidora branding: \"A Guidora Story\"]  \n[Call to action: \"Full story → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:03]: \"BREAKING POINT\" in bold\n- [0:20]: \"An old GIFT he never OPENED.\" in ALL CAPS\n\n**SUGGESTED MUSIC**: Soft, reflective piano transitioning to a more hopeful, uplifting melody as Tom discovers the Quran and begins to find peace.\n\n**THUMBNAIL FRAME**: [0:20] - Tom startled by the falling book, a perfect moment capturing the initial shock that leads to his transformation.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07908,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2025-12-14T22:18:54.074837"
+}
