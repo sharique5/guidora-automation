@@ -16,38 +16,10 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-def find_story_files(story_number):
-    """Find all language versions of a story."""
-    stories_dir = Path("data/stories")
-    files = {}
-    
-    # Search for files containing the story number or recent files
-    for lang in ['en', 'es', 'fr', 'hi', 'ur', 'youtube_optimized']:
-        lang_dir = stories_dir / lang
-        if not lang_dir.exists():
-            continue
-        
-        # Get most recent JSON file
-        json_files = sorted(lang_dir.glob("*.json"), key=lambda x: x.stat().st_mtime, reverse=True)
-        if json_files:
-            files[lang] = json_files[0]
-    
-    return files
-
-def extract_title(file_path):
-    """Extract title from story file."""
-    with open(file_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
-    # Try different title fields
-    title = data.get('title')
-    if not title:
-        # Try extracting from content
-        content = data.get('story_content') or data.get('content', '')
-        if '**Title**:' in content:
-            title = content.split('**Title**:')[1].split('\n')[0].strip().strip('"')
-    
-    return title or "Untitled"
+# Import centralized utilities
+sys.path.append(str(Path(__file__).parent))
+from config.paths import VIDEO_TRACKER_FILE, LANGUAGES, ACTIVE_LANGUAGES, LANG_DIR_MAP
+from lib.story_utils import find_story_files, extract_title, load_story
 
 def main():
     if len(sys.argv) < 2:
@@ -67,8 +39,7 @@ def main():
     print("=" * 70)
     
     # Load tracker
-    tracker_file = Path("data/video_tracker.json")
-    with open(tracker_file, 'r', encoding='utf-8') as f:
+    with open(VIDEO_TRACKER_FILE, 'r', encoding='utf-8') as f:
         tracker_data = json.load(f)
     
     # Find story files
@@ -81,34 +52,15 @@ def main():
     
     print(f"✅ Found {len(story_files)} language versions")
     
-    # Map language codes
-    lang_map = {
-        'en': 'en',
-        'es': 'es',
-        'fr': 'fr',
-        'hi': 'hi',
-        'ur': 'ur',
-        'youtube_optimized': 'en'
-    }
-    
-    lang_names = {
-        'en': 'English',
-        'es': 'Spanish',
-        'fr': 'French',
-        'hi': 'Hinglish',
-        'ur': 'Urdu'
-    }
-    
     for file_lang, file_path in story_files.items():
-        lang_code = lang_map.get(file_lang, file_lang)
+        lang_code = LANG_DIR_MAP.get(file_lang, file_lang)
         video_id = f"{story_number}_{lang_code}"
         
         # Get title
         title = provided_title or extract_title(file_path)
         
         # Read story for metadata
-        with open(file_path, 'r', encoding='utf-8') as f:
-            story_data = json.load(f)
+        story_data = load_story(file_path)
         
         tracker_data[video_id] = {
             "video_id": video_id,
@@ -123,10 +75,11 @@ def main():
         }
         
         print(f"\n✅ {video_id}:")
-        print(f"   {lang_names.get(lang_code, lang_code)}: {title[:60]}...")
+        lang_name = LANGUAGES.get(lang_code, {}).get('name', lang_code)
+        print(f"   {lang_name}: {title[:60]}...")
     
     # Save
-    with open(tracker_file, 'w', encoding='utf-8') as f:
+    with open(VIDEO_TRACKER_FILE, 'w', encoding='utf-8') as f:
         json.dump(tracker_data, f, indent=2, ensure_ascii=False)
     
     print(f"\n{'='*70}")

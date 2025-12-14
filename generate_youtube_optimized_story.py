@@ -14,39 +14,18 @@ import hashlib
 sys.path.append(str(Path(__file__).parent / "lib"))
 from llm_tools import create_default_manager
 
-def get_used_characters():
-    """Get list of characters already used in recent stories."""
-    stories_dir = Path("data/stories/youtube_optimized")
-    used_chars = []
-    
-    if stories_dir.exists():
-        for file in stories_dir.glob("*.json"):
-            try:
-                with open(file, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    content = data.get('story_content', '')
-                    # Extract character mentions
-                    if 'Sarah' in content and 'nurse' in content:
-                        used_chars.append('Sarah (night-shift nurse)')
-                    if 'Tom' in content and ('single dad' in content or 'single father' in content):
-                        used_chars.append('Tom (single father)')
-                    # Add more character detection as needed
-            except:
-                continue
-    
-    return list(set(used_chars))  # Remove duplicates
+# Import centralized utilities
+sys.path.append(str(Path(__file__).parent))
+from config.paths import LEARNINGS_FILE, STORY_DIRS, PROMPTS, OPTIMIZATION_FEATURES
+from lib.story_utils import extract_used_characters, get_character_exclusion_text, get_story_count, save_story
 
 def load_random_learning():
     """Load a random unused learning from the database."""
-    learnings_file = Path("data/learnings/learnings.jsonl")
-    
-    with open(learnings_file, 'r', encoding='utf-8') as f:
+    with open(LEARNINGS_FILE, 'r', encoding='utf-8') as f:
         learnings = [json.loads(line) for line in f if line.strip()]
     
-    # Get next unused learning
-    # Check how many stories already exist
-    stories_dir = Path("data/stories/youtube_optimized")
-    story_count = len(list(stories_dir.glob("*.json"))) if stories_dir.exists() else 0
+    # Get next unused learning based on story count
+    story_count = get_story_count()
     
     # Use different learning each time
     learning_index = min(story_count, len(learnings) - 1)
@@ -70,15 +49,14 @@ def generate_youtube_optimized_story():
     print(f"   Practical Application: {learning['practical_application'][:80]}...")
     
     # Load the YouTube-optimized prompt
-    prompt_file = Path("prompts/story_universal_youtube_optimized.txt")
-    with open(prompt_file, 'r', encoding='utf-8') as f:
+    with open(PROMPTS['story_youtube_optimized'], 'r', encoding='utf-8') as f:
         prompt_template = f.read()
     
     # Fill in the practical application
     story_prompt = prompt_template.replace("{practical_application}", learning['practical_application'])
     
     # Check for used characters
-    used_chars = get_used_characters()
+    used_chars = extract_used_characters()
     
     print(f"\n🎯 Generating with YouTube Best Practices:")
     print(f"   ✓ Hook with pattern interruption (first 3 seconds)")
@@ -92,10 +70,8 @@ def generate_youtube_optimized_story():
         for char in used_chars:
             print(f"   ❌ {char}")
         
-        # Add exclusion to prompt
-        exclusion = f"\n\nCRITICAL: DO NOT use these characters (already used in recent videos):\n" + "\n".join([f"- {c}" for c in used_chars])
-        exclusion += "\n\nYou MUST choose a completely different character type from the diverse options list."
-        story_prompt = story_prompt + exclusion
+        # Add exclusion to prompt using utility function
+        story_prompt = story_prompt + get_character_exclusion_text(used_chars)
     
     # Generate story
     llm = create_default_manager()
@@ -109,8 +85,7 @@ def generate_youtube_optimized_story():
     print(f"   ✅ Story generated (${story_cost:.4f})")
     
     # Generate YouTube metadata
-    metadata_prompt_file = Path("prompts/youtube_metadata_youtube_optimized.txt")
-    with open(metadata_prompt_file, 'r', encoding='utf-8') as f:
+    with open(PROMPTS['metadata_youtube_optimized'], 'r', encoding='utf-8') as f:
         metadata_template = f.read()
     
     metadata_prompt = metadata_template.replace("{story_content}", story_content)
@@ -137,25 +112,15 @@ def generate_youtube_optimized_story():
             "total_cost": story_cost + metadata_cost,
             "model_used": "gpt-4-turbo",
             "template": "youtube_optimized",
-            "optimization_features": [
-                "pattern_interruption_hook",
-                "curiosity_driven_title",
-                "diverse_characters",
-                "crisis_point_tension",
-                "retention_hooks",
-                "ctr_optimized_thumbnail"
-            ]
+            "optimization_features": OPTIMIZATION_FEATURES
         },
         "generated_at": datetime.now().isoformat()
     }
     
-    # Save to file
-    output_dir = Path("data/stories/youtube_optimized")
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
+    # Save to file using utility function
+    output_dir = STORY_DIRS['youtube_optimized']
     output_file = output_dir / f"{story_id}.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(story_data, f, indent=2, ensure_ascii=False)
+    save_story(output_file, story_data)
     
     print(f"\n💾 Saved to: {output_file}")
     print(f"\n{'=' * 70}")

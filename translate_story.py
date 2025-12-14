@@ -17,21 +17,10 @@ from datetime import datetime
 sys.path.append(str(Path(__file__).parent / "lib"))
 from llm_tools import create_default_manager
 
-def find_story_file(story_id):
-    """Find story file in any subdirectory."""
-    stories_dir = Path("data/stories")
-    
-    # Search in all subdirectories
-    for json_file in stories_dir.rglob("*.json"):
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                if data.get('id') == story_id:
-                    return json_file, data
-        except:
-            continue
-    
-    return None, None
+# Import centralized utilities
+sys.path.append(str(Path(__file__).parent))
+from config.paths import LANGUAGES, ACTIVE_LANGUAGES, STORY_DIRS
+from lib.story_utils import find_story, save_story, generate_story_filename
 
 def translate_content(content, target_language, language_name):
     """Translate content to target language."""
@@ -82,7 +71,7 @@ def main():
     
     # Find the story
     print(f"\n🔍 Searching for story...")
-    story_file, story_data = find_story_file(story_id)
+    story_file, story_data = find_story(story_id)
     
     if not story_data:
         print(f"❌ Story not found: {story_id}")
@@ -94,12 +83,8 @@ def main():
     story_content = story_data.get('story_content') or story_data.get('content', '')
     metadata_content = story_data.get('youtube_metadata', '')
     
-    # Languages
-    languages = {
-        'es': 'Spanish',
-        'fr': 'French',
-        'hi': 'Hinglish'
-    }
+    # Use active languages from config (excluding English)
+    languages = {lang: LANGUAGES[lang]['name'] for lang in ACTIVE_LANGUAGES if lang != 'en'}
     
     total_cost = 0.0
     
@@ -137,19 +122,12 @@ def main():
             "translated_at": datetime.now().isoformat()
         }
         
-        # Save
-        output_dir = Path(f"data/stories/{lang_code}")
-        output_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Create filename from title or story_id
+        # Save using utility functions
+        output_dir = STORY_DIRS[lang_code]
         title = story_data.get('title', story_id)
-        safe_filename = title.lower().replace('"', '').replace("'", '').replace(' ', '_')[:60]
-        filename = f"{safe_filename}_{lang_code}.json"
-        
+        filename = generate_story_filename(title, lang_code)
         output_file = output_dir / filename
-        
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(translated_data, f, indent=2, ensure_ascii=False)
+        save_story(output_file, translated_data)
         
         print(f"   💾 {output_file}")
     
