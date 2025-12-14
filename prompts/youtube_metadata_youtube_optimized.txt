@@ -1,0 +1,168 @@
+**Create HIGH-RETENTION YouTube metadata optimized for algorithm and human curiosity:**
+
+Story: "{story_content}"
+
+**🎯 YOUTUBE OPTIMIZATION RULES:**
+1. Titles MUST create curiosity gap (not just describe content)
+2. First line of description MUST hook attention
+3. Use psychological triggers: tension, stakes, transformation
+4. Optimize for click + watch time (not just clicks)
+
+**Generate the following:**
+
+**TITLE** (50-60 characters max):
+Create a curiosity-driven, high-CTR title using these proven formulas:
+
+❌ AVOID (Wise but low-tension):
+- "Finding Peace in Daily Life"
+- "The Power of Gratitude" 
+- "How to Stay Calm"
+- "A Story About Patience"
+
+✅ USE (Curiosity + Stakes + Benefit):
+- "This Habit Saved Her From Burnout"
+- "What She Learned After Losing Everything"
+- "The Mistake That Destroys Your Peace Daily"
+- "He Was About to Quit — Then This Happened"
+- "The 3 AM Discovery That Changed Everything"
+
+**Title Formula Options:**
+1. **Hidden Cost**: "This [X] Silently Destroys Your [Y] (Most Don't Notice)"
+2. **Transformation**: "What [Person] Discovered After [Crisis]"
+3. **Mistake/Warning**: "The [X] Mistake Costing You [Y] Every Day"
+4. **Before/After**: "[Person] Was [Bad State] — Then [Dramatic Change]"
+5. **Secret/Discovery**: "[Person] Found [X] in the Most Unexpected Place"
+6. **Stakes**: "She Nearly Lost [X] Before Learning This"
+7. **Contradiction**: "The [Opposite Thing] That Actually [Result]"
+
+**Title Checklist:**
+- ✅ Creates curiosity gap (doesn't reveal the answer)
+- ✅ Implies stakes (what could be lost/gained)
+- ✅ Suggests transformation (before → after)
+- ✅ Uses specific details (not generic)
+- ✅ Avoids weak words (maybe, probably, kind of)
+- ✅ Passes "scroll test" (would YOU click?)
+
+**DESCRIPTION** (First 150 characters are CRITICAL):
+
+**First Line (The Hook)** - Must grab attention immediately:
+❌ "In this video, we share a story about..."
+✅ "Most people make this mistake every single day — here's what it's costing you."
+
+**Full Description Structure:**
+1. **Hook** (1-2 sentences): Start with tension or curiosity
+2. **Story Summary** (2-3 sentences): Tease the transformation without spoiling
+3. **Value Promise** (1-2 sentences): What viewers will gain
+4. **Engagement CTA** (1-2 sentences): Like, subscribe, comment question
+5. **Keywords**: Naturally include 3-5 relevant search terms
+
+Example:
+"Most people never see this coming. [Character] was [crisis situation] when [turning point]. What happened next revealed something unexpected about [theme].
+
+Watch this story and discover [specific benefit]. You might recognize yourself in [character's] journey.
+
+💡 Question: Have you ever experienced [relatable situation]? Share your story in the comments.
+
+🔔 Subscribe for more real stories about real transformation.
+
+#[Keyword1] #[Keyword2] #[Keyword3]"
+
+**TAGS** (15-20 tags):
+Mix of:
+- **High-volume keywords** (life advice, personal growth, inspiration)
+- **Story-specific** (burnout recovery, single parent struggles, career change)
+- **Emotional triggers** (overcoming fear, finding peace, transformation story)
+- **Audience intent** (motivation, self improvement, real stories)
+- **Long-tail** (how to overcome burnout naturally, finding purpose after loss)
+
+Example tag strategy:
+1-3 broad tags (personal growth, life lessons)
+5-7 specific tags (burnout recovery, work life balance)
+5-7 emotional tags (overcoming adversity, finding hope)
+3-5 format tags (real story, true transformation, inspiring story)
+
+**VIDEO PRODUCTION ELEMENTS:**
+
+**MAIN STORY SCRIPT** (140-160 seconds):
+Format for maximum retention:
+
+**Hook (0:00-0:05)**: Pattern interrupt
+"[Shocking statement or provocative question]"
+*Visual: Dramatic opening scene*
+
+**Setup (0:05-0:30)**: Introduce character AT crisis point
+"For [character], a [occupation], this was the moment everything fell apart..."
+*Visual: Show the struggle vividly*
+
+**Tension Build (0:30-1:15)**: Show what's at stake
+"[Specific examples of how bad it got]"
+*Visual: Escalating crisis moments*
+
+**Turning Point (1:15-1:45)**: The discovery/insight
+"Then [unexpected event] happened..."
+*Visual: Moment of realization*
+
+**Transformation (1:45-2:20)**: Show specific changes
+"Here's what changed: [3 specific examples]"
+*Visual: Before/after contrasts*
+
+**Takeaway (2:20-2:30)**: Circle back to hook
+"Remember that [hook reference]? Here's the truth: [answer]"
+*Visual: Clear actionable insight*
+
+**CALL-TO-ACTION SLIDE** (2:30-2:37 seconds):
+"If this story shifted something for you, hit like and subscribe. Share it with someone who needs this today. Drop a comment about your own experience."
+
+**Engagement Question to Display:**
+"What would YOU do in [character's] situation?"
+
+**BRANDING OUTRO** (2:37-2:42 seconds):
+(Visuals: Logo animation, soft background)
+"Guidora - Wisdom for Modern Life"
+(Text overlay: "Real stories. Real transformation.")
+
+**THUMBNAIL CONCEPT**:
+Based on YouTube CTR best practices:
+- **Human face** with strong emotion (stress → relief)
+- **Text overlay**: 3-5 words MAX from title's most curious part
+- **High contrast**: Bold colors, thick outlines
+- **Emotional symbols**: Visual metaphor for transformation
+- **Top placement**: Text at TOP (YouTube UI covers bottom)
+
+Example: Face showing stress → calm, with text "This Saved Her" at top, arrow/transformation symbol visible
+
+**TARGET KEYWORDS** (for SEO):
+1. Primary: [main transformation topic]
+2. Secondary: [character type + problem]
+3. Long-tail: [specific situation + solution]
+4. Emotional: [feeling before + feeling after]
+5. Audience: [demographic + need]
+
+**AUDIENCE INSIGHTS**:
+Who will this resonate with?
+- **Demographics**: [Age, life stage, situation]
+- **Pain points**: [Specific struggles]
+- **Desired outcome**: [What they want to achieve]
+- **Search intent**: [What they might search for]
+
+**RETENTION HOOKS** (to maintain watch time):
+- **0:05**: "But here's what nobody told her..."
+- **0:45**: "Then something unexpected happened..."
+- **1:30**: "The turning point came when..."
+- **2:15**: "Here's the surprising part..."
+
+**COMMENT ENGAGEMENT STRATEGY**:
+Pin a comment asking:
+"At what point in [character's] story did you see yourself? Let me know in replies 👇"
+
+**CRITICAL CHECKLIST:**
+- ✅ Title creates curiosity gap (doesn't give away answer)
+- ✅ First 3 seconds interrupt pattern (not polite intro)
+- ✅ Description hooks in first line
+- ✅ Story shows stakes clearly (what could be lost)
+- ✅ Transformation is specific and believable
+- ✅ Takeaway answers the hook's question
+- ✅ Thumbnail has human face + emotion + minimal text
+- ✅ Multiple retention hooks throughout
+- ✅ Clear engagement CTA
+- ✅ Keywords naturally integrated

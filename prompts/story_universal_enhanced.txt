@@ -21,11 +21,33 @@ Write a brief description that would work as a YouTube video description, highli
 
 1. **HOOK** (1-2 sentences): Start with a relatable situation that immediately grabs attention
 
-2. **CHARACTER & SCENARIO** (2-3 paragraphs): Introduce a protagonist facing a modern challenge. Make them diverse and relatable. Common scenarios:
-   - Overwhelmed working professional
-   - Stressed student or parent
-   - Someone facing a life transition
-   - Person dealing with relationship conflict
+2. **CHARACTER & SCENARIO** (2-3 paragraphs): Introduce a protagonist facing a modern challenge. Make them diverse and relatable. 
+
+**DIVERSE CHARACTER OPTIONS** (Choose one that hasn't been used recently):
+   - **Healthcare Worker**: Nurse, doctor, caregiver dealing with burnout and compassion fatigue
+   - **Teacher/Educator**: School teacher, tutor, or mentor struggling with student challenges
+   - **Small Business Owner**: Restaurant owner, shop keeper, artisan balancing finances and passion
+   - **Retired Person**: Elder facing purpose and identity after career ends
+   - **Student**: College/university student dealing with pressure, debt, or career uncertainty
+   - **Single Parent**: Balancing work, childcare, and personal well-being
+   - **Artist/Creative**: Musician, writer, or artist struggling with creative blocks or self-doubt
+   - **Immigrant/Refugee**: Navigating new culture while preserving identity
+   - **Factory/Manual Worker**: Construction worker, mechanic, warehouse worker facing physical and economic stress
+   - **Farmer/Rural Worker**: Dealing with nature's unpredictability and isolation
+   - **Community Volunteer**: Person dedicating time to helping others while neglecting self
+   - **Delivery Driver/Gig Worker**: Balancing multiple jobs, financial instability
+   - **Caregiver**: Taking care of aging parents or disabled family member
+   - **Young Professional**: Recent graduate facing imposter syndrome or career pressure
+
+**Settings** (Vary beyond just busy cities):
+   - Small town or rural community
+   - Coastal fishing village
+   - Suburban neighborhood
+   - University campus
+   - Hospital or clinic
+   - Local market or community center
+   - Family farm
+   - Urban apartment complex with diverse residents
 
 3. **THE CHALLENGE** (1-2 paragraphs): Show the specific problem or dilemma they're facing. Make it authentic and emotionally resonant.
 
