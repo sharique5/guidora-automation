@@ -28,6 +28,9 @@ data/thumbnails/*.jpeg
 # Video tracking database (contains sensitive data, local state)
 data/video_tracker.json
 
+# Generated Shorts (large files, manual Instadoodle creation)
+data/videos/shorts/*
+
 # Script outputs and test files
 scripts/output/
 scripts/temp/
