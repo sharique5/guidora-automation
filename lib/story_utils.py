@@ -246,28 +246,45 @@ def get_story_count(directory: Optional[Path] = None) -> int:
     return len(list(directory.glob("*.json")))
 
 
-def generate_story_filename(title: str, lang_code: str, max_length: int = 60) -> str:
+def generate_story_id(story_number: str, character: str, occupation: str, lang: str = 'en', is_short: bool = False, short_type: str = None) -> str:
     """
-    Generate a safe filename from a story title.
+    Generate standardized story ID using new naming convention.
     
     Args:
-        title: Story title
-        lang_code: Language code
-        max_length: Maximum filename length
+        story_number: Story number (e.g., "004", "005")
+        character: Character name (e.g., "sarah", "tom")
+        occupation: Character occupation (e.g., "nurse", "father")
+        lang: Language code (default "en")
+        is_short: Whether this is a short (default False)
+        short_type: Short type if is_short=True ("hook", "wisdom", "crisis")
     
     Returns:
-        Safe filename with extension
+        Formatted story ID
+    
+    Examples:
+        >>> generate_story_id("004", "sarah", "nurse", "en")
+        '004_sarah_nurse_story_en'
+        
+        >>> generate_story_id("004", "sarah", "nurse", is_short=True, short_type="hook")
+        '004_sarah_short_hook'
     """
-    # Remove quotes and special characters
-    safe_title = re.sub(r'["\':?!]', '', title)
-    safe_title = re.sub(r'[^\w\s-]', '_', safe_title)
-    safe_title = re.sub(r'\s+', '_', safe_title).lower()
+    if is_short:
+        if not short_type:
+            raise ValueError("short_type required when is_short=True")
+        return f"{story_number}_{character}_short_{short_type}"
+    else:
+        return f"{story_number}_{character}_{occupation}_story_{lang}"
+
+
+def generate_story_filename(story_number: str, character: str, occupation: str, lang: str = 'en', is_short: bool = False, short_type: str = None) -> str:
+    """
+    Generate standardized filename using new naming convention.
     
-    # Truncate if too long
-    if len(safe_title) > max_length:
-        safe_title = safe_title[:max_length]
-    
-    return f"{safe_title}_{lang_code}.json"
+    Returns:
+        Filename with .json extension
+    """
+    story_id = generate_story_id(story_number, character, occupation, lang, is_short, short_type)
+    return f"{story_id}.json"
 
 
 def validate_story_data(story_data: Dict) -> Tuple[bool, List[str]]:

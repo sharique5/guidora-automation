@@ -1,0 +1,52 @@
+{
+  "id": "enhanced_story_1_1_universal_9f285839",
+  "source_learning_id": "learning_1_1_b9b9bc1f",
+  "title": "روزمرہ کی مصروفیات میں سکون تلاش کرنا",
+  "description": "",
+  "content": "**عنوان:**  \n\"روزمرہ کی مصروفیات میں سکون تلاش کرنا\"\n\n**تفصیل:**  \nدریافت کریں کہ کس طرح آپ کے دن میں سادہ اور باخبر لمحات کو شامل کرکے تناؤ کو سکون اور وضاحت میں تبدیل کیا جا سکتا ہے۔ یہ کہانی ہماری تیز رفتار دنیا میں روحانی خیریت حاصل کرنے کے عملی طریقہ کو تلاش کرتی ہے۔\n\n**کہانی کا مواد:**\n\n**ہک:**  \nتصور کریں کہ آپ تین فونز کو جگل کر رہے ہیں، ہر ایک بے تحاشا بج رہا ہے۔ یہ جینا کی پیر کی صبح ہے۔\n\n**کردار اور منظرنامہ:**  \nجینا، جو کہ ایک چھپر پھاڑ کر بڑھتی ہوئی ٹیک اسٹارٹ اپ میں 38 سالہ پروجیکٹ مینیجر ہے، خود کو مسلسل مصروف پاتی ہے۔ ڈیڈلائنز قریب آ رہی ہیں اور اس کی ٹیم اس کی رہنمائی پر انحصار کرتی ہے، ہر دن دباؤ بڑھتا جا رہا ہے۔ وہ اکیلی ماں ہے، اپنے کیریئر کے ساتھ ساتھ ایک زندہ دل مگر مطالبہ کرنے والی نو سالہ بیٹی کی پرورش کر رہی ہے۔ حال ہی میں، جینا کو ایسا محسوس ہوتا ہے کہ وہ ہمیشہ دوڑ رہی ہے، لیکن کبھی بھی پکڑ نہیں پا رہی۔\n\n**چیلنج:**  \nایک شام، جینا اپنے صوفے پر گر پڑتی ہے، اس کا دماغ کام پر ادھورے کاموں اور حل نہ ہونے والے مسائل سے بھرا ہوتا ہے۔ اسے ایک بڑھتا ہوا خوف محسوس ہوتا ہے کہ شاید وہ کافی اچھی نہیں ہے، کہ شاید وہ کبھی توازن نہ پا سکے۔ اس کی نیند بے چین ہوتی ہے، آنے والی پیشکشوں اور اپن",
+  "category": "spiritual_practice",
+  "target_audience": "universal",
+  "estimated_duration": 208,
+  "themes": [],
+  "characters": [
+    "professional"
+  ],
+  "setting": "modern_urban",
+  "youtube_title": "Finding Peace in the Daily Hustle - Urdu",
+  "youtube_description": "Translated version of Jenna's inspiring story about finding peace through mindful moments.",
+  "youtube_tags": [],
+  "thumbnail_concept": "",
+  "target_keywords": [],
+  "generation_metadata": {
+    "story_tokens": 1411,
+    "metadata_tokens": 2313,
+    "total_cost": 0.11172000000000001,
+    "model_used": "gpt-4-turbo",
+    "prompt_type": "universal",
+    "enhanced_features": true,
+    "branding_integration": true,
+    "video_structure": {
+      "main_story_duration": 196,
+      "cta_slide_duration": 7,
+      "branding_outro_duration": 5,
+      "total_duration": 208
+    },
+    "production_elements": {
+      "cta_slide_included": true,
+      "branding_outro_included": true,
+      "visual_instructions_included": true,
+      "engagement_optimization": true
+    }
+  },
+  "generated_at": "2025-11-11T16:41:58.976904",
+  "quality_score": 0.0,
+  "translation_metadata": {
+    "target_language": "ur",
+    "language_name": "Urdu",
+    "translated_at": "2025-11-11T16:50:23.061251",
+    "translation_model": "gpt-4-turbo",
+    "cultural_adaptation": true,
+    "original_language": "en",
+    "estimated_cost": 0.05787
+  }
+}

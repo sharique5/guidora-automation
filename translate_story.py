@@ -20,7 +20,7 @@ from llm_tools import create_default_manager
 # Import centralized utilities
 sys.path.append(str(Path(__file__).parent))
 from config.paths import LANGUAGES, ACTIVE_LANGUAGES, STORY_DIRS
-from lib.story_utils import find_story, save_story, generate_story_filename
+from lib.story_utils import find_story, save_story, generate_story_filename, extract_character_info
 
 def translate_content(content, target_language, language_name):
     """Translate content to target language."""
@@ -124,8 +124,27 @@ def main():
         
         # Save using utility functions
         output_dir = STORY_DIRS[lang_code]
-        title = story_data.get('title', story_id)
-        filename = generate_story_filename(title, lang_code)
+        
+        # Generate new-style filename
+        # Extract character info from story
+        char_info = extract_character_info(story_content)
+        if char_info and 'id' in story_data:
+            # Try to extract story number from ID (e.g., "004_sarah_nurse_story_en")
+            story_id_parts = story_data['id'].split('_')
+            if len(story_id_parts) >= 4 and story_id_parts[0].isdigit():
+                story_num = story_id_parts[0]
+                character = story_id_parts[1]
+                occupation = story_id_parts[2]
+                filename = f"{story_num}_{character}_{occupation}_story_{lang_code}.json"
+            else:
+                # Fallback to old method
+                title = story_data.get('title', story_id)
+                filename = generate_story_filename(title, lang_code)
+        else:
+            # Fallback
+            title = story_data.get('title', story_id)
+            filename = generate_story_filename(title, lang_code)
+        
         output_file = output_dir / filename
         save_story(output_file, translated_data)
         

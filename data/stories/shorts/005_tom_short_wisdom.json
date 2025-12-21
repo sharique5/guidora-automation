@@ -1,0 +1,16 @@
+{
+  "id": "005_tom_short_wisdom",
+  "parent_story_id": "005_tom_story_en",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: Alone at 3 AM: A Father's Revelation\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Close-up shots of a distressed father in a dimly lit room, switching to calming visuals of him reading and interacting gently with his daughter in a warmly lit setting.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"3 AM. Alone. Desperate.\"\n[Close-up: Tom's anxious face in the dark]\n\n[0:03-0:08] BUILD\n\"Tom, a single dad, overwhelmed.\"\n[Pan around the sparse, dim room]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Feeling like a failure to his daughter.\"\n[Visual: Tom looking at sleeping daughter, Mia, worry evident]\n\n[0:15-0:25] THE TURN\n\"Knocks over a book — an untouched gift.\"\n[Visual: Book falls from a shelf, Tom picks it up]\n\n[0:25-0:35] TRANSFORMATION\n\"Opens it randomly: verses on hope.\"\n[Visual: Tom reading, visibly relaxing]\n\n[0:35-0:42] IMPACT\n\"Nightly readings change everything.\"\n[Visual: Tom smiling with Mia, improved interactions at work]\n\n[0:42-0:45] PAYOFF + CTA + BRANDING\n\"Find your book of hope. 📘\"\n[Guidora branding: \"A Guidora Story\"]\n[Call to action: \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:03]: \"ALONE. DESPERATE.\"\n- [0:15]: \"Knocks over a BOOK — an untouched GIFT.\"\n- [0:35]: \"Nightly readings CHANGE EVERYTHING.\"\n\n**SUGGESTED MUSIC**: Soft, reflective piano transitioning to a hopeful, uplifting melody.\n\n**THUMBNAIL FRAME**: [0:25] - Tom's face illuminated softly by the book's pages, a moment of calm and curiosity, perfect for engaging viewers.\n\nThis script ensures a quick emotional connection with the viewer, maintaining engagement with the unfolding story, and encouraging further interaction with the Guidora brand.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07577999999999999,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2025-12-14T22:19:08.695718",
+  "migration_note": "Migrated from youtube_optimized_learning_2_1_eeef46ed_302e7cd1_short_wisdom_84a87719"
+}
