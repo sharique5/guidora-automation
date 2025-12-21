@@ -40,24 +40,24 @@ class WhiteboardThumbnailConfig:
     use_youtube_title: bool = True    # Use YouTube title instead of story title
     title_position: str = "top"       # top, bottom, center (TOP recommended for YouTube UI)
     title_style: str = "bold_modern"  # bold_modern, handwritten, clean
-    font_size_ratio: float = 0.08     # Relative to image height
+    font_size_ratio: float = 0.05     # Relative to image height (smaller/sharper)
     
     # YouTube optimization features (NEW)
     include_human_face: bool = True   # Add human figure with emotion (2-5x better CTR)
     high_contrast: bool = True        # Thick bold outlines for mobile readability
     emotional_symbols: bool = True    # Add transformation symbols (arrows, lightbulb, etc)
     add_brand_mark: bool = True       # Tiny Guidora mark for recognition
-    brand_mark_position: str = "top_left"  # top_left, top_right, bottom_left, bottom_right
+    brand_mark_position: str = "bottom_right"  # top_left, top_right, bottom_left, bottom_right
     
     # Post-processing (NEW)
     auto_enhance: bool = True         # Auto contrast, sharpen, crop to safe margins
-    generate_variants: int = 2        # Generate multiple options to pick best (1-3)
+    generate_variants: int = 3        # Generate multiple options to pick best (1-3)
     
     # Language strategy
     language_strategy: str = "universal"  # universal, localized, english_only
     
     # Provider preferences
-    primary_provider: str = "openai"
+    primary_provider: str = "gemini"  # gemini-2.5-flash-image-preview, openai
     fallback_providers: List[str] = None
 
 class WhiteboardThumbnailGenerator:
@@ -73,6 +73,7 @@ class WhiteboardThumbnailGenerator:
         # API keys
         self.openai_api_key = os.getenv('OPENAI_API_KEY')
         self.stability_api_key = os.getenv('STABILITY_API_KEY')
+        self.gemini_api_key = os.getenv('GEMINI_API_KEY')
         
         # Language-specific considerations for thumbnails
         self.language_thumbnail_strategy = {
@@ -134,74 +135,122 @@ class WhiteboardThumbnailGenerator:
             return language == "en"
     
     def generate_whiteboard_prompt(self, story_data: Dict, language: str, variant: int = 1) -> str:
-        """Generate optimized prompt for whiteboard-style thumbnail with YouTube best practices."""
+        """ULTRA minimal prompt - just essential visual elements."""
         title = self.get_correct_title(story_data, language)
-        description = story_data.get('description', '')
-        themes = story_data.get('themes', [])
+        character_visuals = self._extract_character_visuals(story_data)
         
-        # Extract key visual elements and emotions
-        visual_elements = self._extract_story_visuals(story_data)
-        emotions = self._extract_emotional_journey(story_data)
+        # ABSOLUTE MINIMUM - describe the scene visually
+        prompt = f"""Whiteboard sketch (black marker on white, 1280x720):
+
+Draw in this exact order:
+1. A FEMALE NURSE in BLUE SCRUBS with STETHOSCOPE
+2. She is sitting, head in hands, looking EXHAUSTED
+3. Medical clipboard next to her
+4. Behind her: minimal hospital wall lines
+5. Small scribbles/stress marks around her head
+
+Style: Hand-drawn sketch, bold black lines, blue only on scrubs
+No: suits, laptops, office, text"""
         
-        # Build optimized prompt with YouTube best practices
-        prompt = f"""Create a high-impact YouTube thumbnail in whiteboard/sketch style for "{title}".
+        return prompt
+        
+        # Build ULTRA-SIMPLIFIED prompt focusing on visual description first
+        prompt = f"""Draw a whiteboard sketch in black marker on white background for YouTube thumbnail (1280x720, 16:9).
 
-CRITICAL YOUTUBE OPTIMIZATION:
-- THICK BOLD OUTLINES: Strong contrast for mobile viewing (60%+ of traffic)
-- HUMAN FACE/FIGURE: Include a simplified whiteboard-style human figure with CLEAR emotional expression
-  * Show facial emotion: {emotions['before']} transforming to {emotions['after']}
-  * Minimalist face: simple eyes, mouth, and body language
-  * Expression must be obvious even at thumbnail size
-- HIGH CONTRAST: Bold black lines on pure white, minimal thin strokes
-- SAFE MARGINS: Keep important elements away from edges (10% border)
+WHAT TO DRAW (be specific):
+1. MAIN CHARACTER (takes up 60% of image):
+   - A WOMAN wearing medical scrubs (nurse uniform)
+   - Short or tied-back hair
+   - Stethoscope around neck
+   - Sitting with head in hands OR hunched over
+   - Facial expression: tired, stressed, exhausted
+   - Holding or next to: medical clipboard
+   
+2. SETTING (minimal, background):
+   - Suggest hospital: simple vertical lines for wall, doorframe sketch
+   - ONE simple element: hospital bed outline OR nurse station counter
+   - Keep it minimal - just enough to show it's a medical setting
 
-WHITEBOARD STYLE:
-- Hand-drawn sketch aesthetic (like whiteboard animation)
-- Primarily bold black marker strokes
-- Strategic blue accent highlights (#2563eb) on key transformation elements
-- Clean, educational, professional feel
+3. SYMBOLS (small, around her head):
+   - 2-3 scribble marks showing stress/chaos
+   - Maybe 1-2 question marks
+   - Keep these SMALL
 
-COMPOSITION (Variant #{variant}):
+STYLE:
+- Bold black marker lines on pure white
+- Hand-drawn sketch look (like whiteboard animation)
+- Blue color ONLY on the scrubs uniform
+- Character: thick lines (5px), Background: thin lines (2px)
+
+COMPOSITION:
+- Character on LEFT side (60% of image)
+- RIGHT side mostly empty (for text overlay later)
+- Character's face clearly visible
+
+DO NOT INCLUDE:
+- Men, businessmen, suits, ties, formal wear
+- Office settings, desks, laptops
+- Any text or words
+- Complex details or patterns
+
+Title for context: "{title}" ""
+
+- Action: Sitting on a bench or standing, head in hands, showing clear struggle/distress
+- Emotion: {character_visuals['emotion']}
+- KEY PROP: Include {character_visuals['prop']} visible in their hands or on lap
+- This character should be the LARGEST element (60% of frame), drawn with THICK confident black lines
+- Character's face and body language are THE FOCUS
+
+BACKGROUND & SETTING:
+- Setting: {character_visuals['setting']} (MINIMAL lines - just suggest the space)
+- Metaphor: A small chaotic cloud of scribbles, question marks, or symbols around the character's head
+- Keep background simple - 40% less detail than typical thumbnails
+- Background uses thinner lines than the main character
+
+VISUAL STYLE (WHITEBOARD - SIMPLIFIED):
+- Hand-drawn sketch aesthetic
+- NO GREYSCALE SHADING - bold black lines on pure white only
+- ONE Accent Color: Blue (#2563eb) used ONLY on character's clothing or one key element
+- Line weight: THICK (5-7px equivalent) for character, thin (2-3px) for background
+- HIGH CONTRAST: Maximum black-on-white difference
+
+COMPOSITION:
+- Rule of Thirds: Character on Left/Center
+- Negative Space: Keep Right side relatively clear (for text overlay)
+- MARGINS: Keep all elements 15% away from edges
 - Dimensions: {self.config.width}x{self.config.height} (16:9 YouTube ratio)
-- Title space: Clear area at TOP 20% of image (YouTube UI covers bottom)
-- Central focus: Human figure showing emotional transformation
-- Visual hierarchy: Person → key moment → transformation symbols
 
-STORY ELEMENTS:
-- Main theme: {', '.join(themes) if themes else 'personal growth and transformation'}
-- Key visuals: {visual_elements}
-- Emotional journey: {emotions['before']} → {emotions['insight']} → {emotions['after']}
+EMOTIONAL FRAMING (NON-NEGOTIABLE):
+- The character's facial expression is THE MOST IMPORTANT element
+- Face must show clear distress: furrowed brow, downcast eyes, tense mouth
+- Body language: Hunched shoulders, head in hands, or similar defeated posture
+- Focus on THE PROBLEM/HOOK - not the solution yet
 
-TRANSFORMATION SYMBOLS (Essential for CTR):
-- Add simple whiteboard doodles that represent the story:
-  * Stress phase: Chaotic scribbles, question marks, zigzag lines around figure
-  * Insight moment: Lightbulb, rays of light, or "aha!" visual marker
-  * Transformation: Arrows pointing up, checkmarks, calm aura, stars
-- Keep symbols LARGE and BOLD enough to see on mobile
 
-VISUAL STYLE:
-- Line weight: THICK and confident (3-5px equivalent)
-- Shading: Minimal, only for emphasis
-- Highlights: Strategic blue on transformation elements
-- Clarity: Every element visible at 320x180px (mobile size)
-- Contrast: Maximum black-on-white difference
+STRICT CONSTRAINTS (NEGATIVE RULES):
+- NO SUITS, NO TIES, NO BUSINESSMEN - be profession-specific
+- NO TEXT inside the image (text overlay added separately)
+- NO SPLIT SCREEN or before/after comparisons
+- NO HAPPY ELEMENTS - focus on the struggle/problem moment
+- NO complex backgrounds - keep it minimal (40% less visual complexity)
+- NO thin delicate lines - everything must be bold and mobile-readable
+- NO photorealistic rendering - keep it sketch/whiteboard style
+- NO bottom-heavy composition (YouTube UI blocks bottom 15%)
 
-STRICT AVOIDS:
-- Thin, delicate lines (invisible on mobile)
-- Photorealistic rendering
-- Complex backgrounds or textures
-- Cluttered compositions with many small elements
-- Any text in the image (title overlay added separately)
-- Bottom-heavy composition (YouTube UI blocks bottom 15%)
+CLARITY CHECK:
+- Every element must be visible at 320x180px (mobile thumbnail size)
+- Face expression must be obvious at small size
+- Total visual elements: 5-7 maximum (character + prop + setting hint + 2-3 chaos symbols)
+- Less is more - prioritize emotional clarity over detail
 
-EMOTION FOCUS:
-The human figure's facial expression and body language are THE MOST IMPORTANT ELEMENTS.
-Make the before/after emotional transformation crystal clear through:
-- Face shape and expression changes
-- Body posture (hunched → upright)
-- Environmental markers (chaos → calm)
+FINAL VERIFICATION BEFORE GENERATING:
+✓ Is the main character a {character_visuals['character']}? (NOT a man in business attire)
+✓ Is the character showing {character_visuals['emotion']}?
+✓ Is the {character_visuals['prop']} visible?
+✓ Is the setting {character_visuals['setting']} suggested with minimal lines?
+✓ NO TEXT in the image?
 
-This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed."""
+This thumbnail must grab attention in 0.5 seconds through emotional impact, not complexity."""
         
         return prompt
     
@@ -225,6 +274,111 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
         else:
             return "person showing transformation from struggle to clarity, journey symbolism, clear before/after emotional states"
     
+    def _extract_character_visuals(self, story_data: Dict) -> Dict[str, str]:
+        """Extract character-specific visual details using LLM analysis."""
+        content = story_data.get('story_content', '') or story_data.get('content', '')
+        title = story_data.get('title', '') or story_data.get('youtube_title', '')
+        
+        # Try OpenAI for smart extraction
+        if self.openai_api_key:
+            try:
+                headers = {
+                    'Authorization': f'Bearer {self.openai_api_key}',
+                    'Content-Type': 'application/json'
+                }
+                
+                extraction_prompt = f"""Analyze this story and extract ONLY these 3 visual elements for a thumbnail:
+
+Story Title: {title}
+Story Content: {content[:1500]}
+
+Extract:
+1. CHARACTER_VISUAL: Describe the main character's appearance, profession, clothing (e.g., "Female Nurse in blue scrubs", "Male Teacher in casual clothes", "Young Father in jeans and t-shirt")
+2. SETTING_VISUAL: The key location/setting (e.g., "Hospital corridor", "Classroom", "Home living room", "Park bench")
+3. KEY_PROP: One important object/prop (e.g., "Medical clipboard", "Smartphone", "Coffee cup", "Books")
+4. EMOTION_STATE: The main character's emotional state at their lowest point (e.g., "Exhausted and burnt out", "Anxious and overwhelmed", "Lonely and afraid")
+
+Respond ONLY in this format:
+CHARACTER_VISUAL: [description]
+SETTING_VISUAL: [description]
+KEY_PROP: [description]
+EMOTION_STATE: [description]"""
+                
+                data = {
+                    'model': 'gpt-4o-mini',
+                    'messages': [
+                        {'role': 'user', 'content': extraction_prompt}
+                    ],
+                    'temperature': 0.3,
+                    'max_tokens': 200
+                }
+                
+                response = requests.post(
+                    'https://api.openai.com/v1/chat/completions',
+                    headers=headers,
+                    json=data,
+                    timeout=30
+                )
+                
+                if response.status_code == 200:
+                    result = response.json()['choices'][0]['message']['content']
+                    
+                    # Parse response
+                    visuals = {
+                        'character': 'Person',
+                        'setting': 'Simple background',
+                        'prop': 'Smartphone',
+                        'emotion': 'Overwhelmed'
+                    }
+                    
+                    for line in result.split('\n'):
+                        if 'CHARACTER_VISUAL:' in line:
+                            visuals['character'] = line.split('CHARACTER_VISUAL:')[1].strip()
+                        elif 'SETTING_VISUAL:' in line:
+                            visuals['setting'] = line.split('SETTING_VISUAL:')[1].strip()
+                        elif 'KEY_PROP:' in line:
+                            visuals['prop'] = line.split('KEY_PROP:')[1].strip()
+                        elif 'EMOTION_STATE:' in line:
+                            visuals['emotion'] = line.split('EMOTION_STATE:')[1].strip()
+                    
+                    return visuals
+            except Exception as e:
+                logger.warning(f"Character visual extraction failed: {e}")
+        
+        # Fallback: Manual detection
+        content_lower = content.lower()
+        
+        visuals = {
+            'character': 'Person',
+            'setting': 'Simple background',
+            'prop': 'Smartphone',
+            'emotion': 'Overwhelmed and stressed'
+        }
+        
+        # Character detection
+        if 'nurse' in content_lower:
+            visuals['character'] = 'Female Nurse in blue scrubs with stethoscope'
+            visuals['setting'] = 'Hospital corridor or clinic'
+            visuals['prop'] = 'Medical clipboard'
+        elif 'teacher' in content_lower:
+            visuals['character'] = 'Female Teacher in professional attire'
+            visuals['setting'] = 'Classroom or school hallway'
+            visuals['prop'] = 'Books or tablet'
+        elif 'father' in content_lower or 'dad' in content_lower:
+            visuals['character'] = 'Male Father in casual clothes'
+            visuals['setting'] = 'Home living room at night'
+            visuals['prop'] = 'Baby bottle or child\'s toy'
+        
+        # Emotion detection
+        if 'burnout' in content_lower or 'exhausted' in content_lower:
+            visuals['emotion'] = 'Exhausted and burnt out, at breaking point'
+        elif 'anxious' in content_lower or 'panic' in content_lower:
+            visuals['emotion'] = 'Anxious and panicked, losing control'
+        elif 'lonely' in content_lower or 'alone' in content_lower:
+            visuals['emotion'] = 'Lonely and isolated, feeling lost'
+        
+        return visuals
+    
     def _extract_emotional_journey(self, story_data: Dict) -> Dict[str, str]:
         """Extract emotional transformation for better thumbnail design."""
         content = str(story_data.get('content', '') or story_data.get('story_content', '')).lower()
@@ -241,6 +395,8 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
             emotions['before'] = 'stressed and anxious'
         if 'dread' in content or 'fear' in content:
             emotions['before'] = 'fearful and uncertain'
+        if 'burnout' in content or 'exhausted' in content:
+            emotions['before'] = 'exhausted and burnt out'
         
         if 'calm' in content or 'peace' in content:
             emotions['after'] = 'calm and centered'
@@ -291,6 +447,46 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
             logger.error(f"OpenAI generation failed: {e}")
             return None
     
+    def generate_with_gemini(self, prompt: str) -> Optional[bytes]:
+        """Generate whiteboard thumbnail using Google Gemini 2.5 Flash Image Preview."""
+        if not self.gemini_api_key:
+            logger.warning("Gemini API key not available")
+            return None
+        
+        try:
+            import google.generativeai as genai
+            
+            # Configure with API key
+            genai.configure(api_key=self.gemini_api_key)
+            
+            # Use Gemini 2.5 Flash Image Preview
+            model = genai.GenerativeModel('gemini-2.5-flash-image-preview')
+            
+            # Generate image
+            result = model.generate_content([prompt])
+            
+            # Extract image data
+            if result and hasattr(result, 'parts'):
+                for part in result.parts:
+                    if hasattr(part, 'inline_data'):
+                        image_data = part.inline_data.data
+                        return image_data
+            
+            # Try alternative response structure
+            if result and hasattr(result, 'candidates'):
+                for candidate in result.candidates:
+                    if hasattr(candidate, 'content'):
+                        for part in candidate.content.parts:
+                            if hasattr(part, 'inline_data'):
+                                return part.inline_data.data
+            
+            logger.error("Gemini returned no image data")
+            return None
+                
+        except Exception as e:
+            logger.error(f"Gemini generation failed: {e}")
+            return None
+    
     def add_title_overlay(self, image_bytes: bytes, title: str, language: str) -> bytes:
         """Add properly formatted title overlay to thumbnail with YouTube optimization."""
         try:
@@ -334,8 +530,29 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
                 x = (image.width - text_width) // 2
                 y = image.height - text_height - padding - int(image.height * 0.15)  # Account for YouTube UI
             
-            # Create background rectangle for better readability
-            rect_padding = 15
+            # Shorten title if too long (sharper, more dangerous)
+            if len(title) > 50:
+                # Keep first part with impact words
+                title = title[:47] + "..."
+            
+            # Recalculate dimensions after potential shortening
+            bbox = draw.textbbox((0, 0), title, font=font_bold)
+            text_width = bbox[2] - bbox[0]
+            text_height = bbox[3] - bbox[1]
+            
+            # Recalculate position
+            if self.config.title_position == "top":
+                x = (image.width - text_width) // 2
+                y = padding
+            elif self.config.title_position == "center":
+                x = (image.width - text_width) // 2
+                y = (image.height - text_height) // 2
+            else:
+                x = (image.width - text_width) // 2
+                y = image.height - text_height - padding - int(image.height * 0.15)
+            
+            # Create SOLID WHITE RECTANGULAR BACKGROUND (like a sticker)
+            rect_padding = 20
             rect_coords = [
                 x - rect_padding,
                 y - rect_padding,
@@ -343,25 +560,12 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
                 y + text_height + rect_padding
             ]
             
-            # Draw semi-transparent background with stronger opacity
-            overlay = Image.new('RGBA', image.size, (0, 0, 0, 0))
-            overlay_draw = ImageDraw.Draw(overlay)
-            overlay_draw.rectangle(rect_coords, fill=(255, 255, 255, 230))  # Higher opacity for contrast
+            # Draw solid white background (100% opacity)
+            draw.rectangle(rect_coords, fill=(255, 255, 255), outline=(0, 0, 0), width=3)
             
-            # Composite overlay
-            image = Image.alpha_composite(image.convert('RGBA'), overlay)
-            draw = ImageDraw.Draw(image)
-            
-            # Draw text with THICK outline for maximum readability on mobile
-            outline_width = 3  # Increased from 2 for better mobile visibility
-            
-            # Draw thick black outline
-            for adj_x in range(-outline_width, outline_width + 1):
-                for adj_y in range(-outline_width, outline_width + 1):
-                    draw.text((x + adj_x, y + adj_y), title, font=font_bold, fill="black")
-            
-            # Draw main text in blue (brand color)
-            draw.text((x, y), title, font=font_bold, fill=self.config.accent_color)
+            # Draw text in BOLD BLACK for maximum contrast
+            # No outline needed - solid background provides all the contrast
+            draw.text((x, y), title, font=font_bold, fill="#000000")
             
             # Convert back to RGB
             if image.mode == 'RGBA':
@@ -493,8 +697,17 @@ This thumbnail must grab attention in 0.5 seconds on a cluttered YouTube feed.""
             # Generate prompt for this variant
             prompt = self.generate_whiteboard_prompt(story_data, language, variant=variant_num)
             
-            # Generate with OpenAI
-            image_data = self.generate_with_openai(prompt)
+            # Generate with provider (try Gemini first, fallback to OpenAI)
+            if self.config.primary_provider == "gemini":
+                image_data = self.generate_with_gemini(prompt)
+                if not image_data:
+                    logger.info("Gemini failed, falling back to OpenAI")
+                    image_data = self.generate_with_openai(prompt)
+            else:
+                image_data = self.generate_with_openai(prompt)
+                if not image_data:
+                    logger.info("OpenAI failed, falling back to Gemini")
+                    image_data = self.generate_with_gemini(prompt)
             
             if not image_data:
                 logger.warning(f"Variant {variant_num} generation failed, skipping")
