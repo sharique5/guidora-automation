@@ -179,8 +179,9 @@ def main():
         output_file="data/learnings/learnings.jsonl"
     )
     
-    # Process first 100 verses for MVP testing
-    learnings = extractor.process_verses(limit=100)
+    # Process all verses to extract learnings from all chapters (114 chapters total)
+    # Focus on verse 1 from each chapter for maximum diversity
+    learnings = extractor.process_verses(limit=None)  # Process all verses
     
     # Save results
     if learnings:
