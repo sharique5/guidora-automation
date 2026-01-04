@@ -1,0 +1,15 @@
+{
+  "id": "007_josh_painter_story_en_short_wisdom_a454c5bc",
+  "parent_story_id": "007_josh_painter_story_en",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: Joy Saves a Dream: A Painter’s Shift\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between a dark, moody art studio and vibrant, colorful paintings. Use close-ups of the artist’s intense, then joyful expressions.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK  \n\"Ever feel like giving up?\"  \n[Flash images of discarded paintbrushes]\n\n[0:03-0:08] BUILD  \n\"Josh did. Every day.\"  \n[Show Josh in a dim, cluttered studio]\n\n[0:08-0:15] TENSION/CURIOSITY  \n\"Struggling artist in a fading town,\"  \n\"thought suffering was his only path.\"  \n[Visuals of stormy seascapes, Josh looking despondent]\n\n[0:15-0:25] INSIGHT MOMENT  \n\"Then, one rainy cafe chat changed everything.\"  \n[Cut to a cozy cafe, snippets of elderly couple’s conversation]\n\n[0:25-0:35] TRANSFORMATION  \n\"Joy and hope in art?\"  \n\"Josh took the chance.\"  \n[Show Josh painting with new, vibrant colors]\n\n[0:35-0:42] OUTCOME  \n\"His next show? A vibrant success!\"  \n\"Smiles everywhere.\"  \n[Clips of a lively gallery, people enjoying the art]\n\n[0:42-0:45] PAYOFF + CTA + BRANDING  \n\"Joy can save dreams. What’s your joy?\"  \n[GUIDORA logo appears]  \n\"More stories → Link in bio\"\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:15]: \"Then, ONE rainy cafe chat CHANGED EVERYTHING.\"\n- [0:35]: \"His next show? A VIBRANT SUCCESS!\"\n\n**SUGGESTED MUSIC**: Uplifting, from melancholic piano to bright acoustic guitar\n\n**THUMBNAIL FRAME**: [0:35] Josh smiling, holding up a vibrant canvas, capturing the moment of transformation and joy.\n\nThis Short is designed to engage viewers immediately with emotional resonance, maintain interest with a narrative of transformation, and encourage further engagement with a clear call to action, all while reinforcing the Guidora brand.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.06899999999999999,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-04T12:04:13.342124"
+}

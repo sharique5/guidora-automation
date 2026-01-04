@@ -1,0 +1,15 @@
+{
+  "id": "007_josh_painter_story_en_short_hook_abb8d972",
+  "parent_story_id": "007_josh_painter_story_en",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: \"Painter's Despair Turns to Joy!\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between dark, moody paintings and brighter, hopeful artworks. Close-ups of the artist's intense, then relieved expressions.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Every brushstroke felt like a PRISON.\"\n[Josh in his dimly lit studio, surrounded by unsold paintings]\n\n[0:03-0:08] BUILD\n\"He was about to QUIT.\"\n\"Then, one rainy evening...\"\n[Josh staring out a rainy window, distressed]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Unsold pieces. Mounting DEBTS.\"\n[Shots of empty gallery, bills piling up]\n\n[0:15-0:22] CRISIS DEEPENS\n\"Fame, a DISTANT dream...\"\n\"Was his art even WORTH it?\"\n[Close-up of Josh's hands stopping mid-painting]\n\n[0:22-0:30] TURNING POINT HINT\n\"But then, a simple CONVERSATION...\"\n\"At a local cafe changed EVERYTHING.\"\n[Josh overhearing a conversation, intrigued]\n\n[0:30-0:38] THE EPIPHANY\n\"They loved art that brought JOY, not just sadness.\"\n[Flashes of happier paintings, Josh's face lighting up]\n\n[0:38-0:45] PAYOFF + CTA + BRANDING\n\"His next exhibit? A TRIUMPH!\"\n\"More stories → Link in bio\"\n[Final shot of a bustling exhibition, \"GUIDORA\" branding]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:00]: \"PRISON\"\n- [0:22]: \"EVERYTHING\"\n- [0:38]: \"TRIUMPH\"\n\n**SUGGESTED MUSIC**: Start with somber tones, transition to uplifting and hopeful as the mood changes.\n\n**THUMBNAIL FRAME**: [0:38] - Josh smiling at a visitor enjoying his new art style.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.06807,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-04T12:04:03.301534"
+}

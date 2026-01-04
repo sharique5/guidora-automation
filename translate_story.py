@@ -126,10 +126,18 @@ def main():
         output_dir = STORY_DIRS[lang_code]
         
         # Generate new-style filename
-        # Extract character info from story
-        char_info = extract_character_info(story_content)
-        if char_info and 'id' in story_data:
-            # Try to extract story number from ID (e.g., "004_sarah_nurse_story_en")
+        # Try to extract story number from the story file name first
+        story_filename = Path(story_file).stem  # e.g., "007_josh_painter_story_en"
+        story_id_parts = story_filename.split('_')
+        
+        if len(story_id_parts) >= 4 and story_id_parts[0].isdigit():
+            # New format: 007_josh_painter_story_en
+            story_num = story_id_parts[0]
+            character = story_id_parts[1]
+            occupation = story_id_parts[2]
+            filename = f"{story_num}_{character}_{occupation}_story_{lang_code}.json"
+        elif 'id' in story_data:
+            # Try from story data ID
             story_id_parts = story_data['id'].split('_')
             if len(story_id_parts) >= 4 and story_id_parts[0].isdigit():
                 story_num = story_id_parts[0]
@@ -137,13 +145,11 @@ def main():
                 occupation = story_id_parts[2]
                 filename = f"{story_num}_{character}_{occupation}_story_{lang_code}.json"
             else:
-                # Fallback to old method
-                title = story_data.get('title', story_id)
-                filename = generate_story_filename(title, lang_code)
+                # Generate from story_id
+                filename = f"{story_data['id']}_{lang_code}.json"
         else:
-            # Fallback
-            title = story_data.get('title', story_id)
-            filename = generate_story_filename(title, lang_code)
+            # Last resort - use story_id from input
+            filename = f"{story_id}_{lang_code}.json"
         
         output_file = output_dir / filename
         save_story(output_file, translated_data)
