@@ -1,0 +1,15 @@
+{
+  "id": "008_elena_doctor_story_en_short_wisdom_da49a985",
+  "parent_story_id": "008_elena_doctor_story_en",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: \"10 Minutes Changed Her Life Forever\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Quick cuts between scenes of a rural clinic, a distressed doctor, and serene meditation visuals. Use close-ups of the doctor's exhausted face transitioning to a peaceful expression to enhance emotional impact.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Lost her PASSION overnight.\"\n[Close-up of Dr. Elena's exhausted face at the clinic]\n\n[0:03-0:08] BUILD\n\"Every day, more drained than the last.\"\n[Visuals of Dr. Elena working late, looking overwhelmed]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Heard a voice that changed EVERYTHING.\"\n[Shot of Dr. Elena walking in the town square, overhearing a former patient]\n\n[0:15-0:22] INSIGHT MOMENT\n\"Her own advice, forgotten by herself.\"\n[Flashback to Dr. Elena giving advice, contrast with her current state]\n\n[0:22-0:30] TURNING POINT\n\"Stumbled upon a SIMPLE solution.\"\n[Dr. Elena browsing her phone at night, finding a meditation video]\n\n[0:30-0:37] TRANSFORMATION\n\"Just 10 minutes a day brought her back.\"\n[Scenes of Dr. Elena meditating in the morning light]\n\n[0:37-0:45] PAYOFF + CTA + BRANDING\n\"Rediscovered joy, one breath at a time. 🌟\"\n[Smiling Dr. Elena at clinic, interacting joyfully with patients]\n\"GUIDORA\"\n\"More stories → Link in bio\"\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:00]: \"LOST her PASSION overnight.\"\n- [0:08]: \"Heard a VOICE that changed EVERYTHING.\"\n- [0:30]: \"Just 10 MINUTES a day brought her BACK.\"\n\n**SUGGESTED MUSIC**: Uplifting, subtle background score that builds from melancholic to hopeful.\n\n**THUMBNAIL FRAME**: [0:37] - Dr. Elena smiling peacefully during meditation; soft morning light enhances the serene mood, making a compelling visual contrast to the earlier scenes of distress.\n\nThis Short script focuses on rapid emotional changes, a clear transformation, and a relatable message about the power of small daily habits, ensuring high engagement and viewer retention.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07788,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-11T09:33:39.760198"
+}

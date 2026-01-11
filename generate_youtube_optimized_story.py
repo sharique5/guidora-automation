@@ -99,11 +99,53 @@ def generate_youtube_optimized_story():
     print(f"   ✅ Metadata generated (${metadata_cost:.4f})")
     
     # Save the story
-    story_id = f"youtube_optimized_{learning['id']}_{hashlib.md5(story_content.encode()).hexdigest()[:8]}"
+    story_count = get_story_count()
+    story_number = story_count + 1
+    
+    # Extract character name from story (simple extraction from content)
+    character_name = "character"  # Default fallback
+    character_role = "person"  # Default fallback
+    
+    # Try to extract from story content
+    import re
+    content_lower = story_content.lower()
+    
+    # Look for character introduction patterns
+    name_patterns = [
+        r'meet (\w+)',
+        r'dr\.\s+(\w+)',
+        r'introduce[s]?\s+(\w+)',
+        r'(\w+),?\s+a\s+(?:dedicated|talented|struggling)',
+    ]
+    
+    for pattern in name_patterns:
+        match = re.search(pattern, content_lower, re.IGNORECASE)
+        if match:
+            character_name = match.group(1).lower()
+            break
+    
+    # Look for role/occupation
+    role_patterns = [
+        r'(\w+)\s+(?:physician|doctor|nurse|teacher|painter|artist|father|mother)',
+        r'a\s+(?:dedicated|talented|struggling)\s+(\w+)',
+    ]
+    
+    for pattern in role_patterns:
+        match = re.search(pattern, content_lower, re.IGNORECASE)
+        if match:
+            character_role = match.group(1).lower()
+            break
+    
+    story_id = f"{story_number:03d}_{character_name}_{character_role}_story_en"
     
     story_data = {
         "id": story_id,
+        "story_number": story_number,
+        "character_name": character_name.title(),
+        "character_role": character_role,
         "source_learning_id": learning['id'],
+        "learning_chapter": learning.get('chapter_name', ''),
+        "learning_theme": learning.get('practical_application', '')[:100] + "..." if len(learning.get('practical_application', '')) > 100 else learning.get('practical_application', ''),
         "story_content": story_content,
         "youtube_metadata": metadata_content,
         "generation_metadata": {

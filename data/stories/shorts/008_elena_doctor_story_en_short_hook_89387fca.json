@@ -1,0 +1,15 @@
+{
+  "id": "008_elena_doctor_story_en_short_hook_89387fca",
+  "parent_story_id": "008_elena_doctor_story_en",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: From Burnout to Breakthrough in Seconds\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: A mix of close-ups on Dr. Elena’s exhausted face transitioning to scenes of her engaging in meditation and interacting warmly with her patients and family. Visuals should capture the stark contrast between stress and serene recovery.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK  \n\"Ever feel like you’re losing EVERYTHING?\"  \n[Close-up: Dr. Elena’s tired eyes, clinic background]\n\n[0:03-0:08] BUILD  \n\"She did. Every day, another struggle.\"  \n[Scene: Dr. Elena looking overwhelmed with paperwork]\n\n[0:08-0:15] TENSION/CURIOSITY  \n\"Heart of her small town, yet falling apart.\"  \n\"Her passion for medicine? Vanishing.\"  \n[Visuals of Dr. Elena silently at a family dinner, clinic hallways]\n\n[0:15-0:25] CRISIS  \n\"Walk in the park changed EVERYTHING.\"  \n\"Heard her advice changed a life. Why not hers?\"  \n[Scene: Dr. Elena overhearing a conversation in the park]\n\n[0:25-0:30] TURNING POINT  \n\"But then, at 3 AM, a discovery...\"  \n[Visual: Dr. Elena scrolling her phone, finding a meditation video]\n\n[0:30-0:37] SOLUTION TEASE  \n\"Ten minutes of THIS daily...\"  \n\"Could it turn her life around?\"  \n[Scene: Early morning, Dr. Elena starts meditating]\n\n[0:37-0:45] CLIFFHANGER + CTA + BRANDING  \n\"Did meditation save her career and more?\"  \n\"Tap for the full story. You won’t believe the end!\"  \n[Guidora branding: \"GUIDORA\" text, \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:00]: \"EVERYTHING\"\n- [0:08]: \"Heart of her SMALL TOWN\"\n- [0:15]: \"EVERYTHING\"\n- [0:25]: \"3 AM\"\n- [0:37]: \"Did meditation SAVE her career\"\n\n**SUGGESTED MUSIC**: Calm yet building tension, transitioning to a hopeful tone as the solution is teased.\n\n**THUMBNAIL FRAME**: [0:00] Close-up of Dr. Elena’s tired eyes, which captures the emotional depth and immediate hook of the story.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07848,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-11T09:33:26.156738"
+}
