@@ -87,7 +87,7 @@ COST_LIMITS = {
 
 # Prompt templates
 PROMPTS = {
-    'story_youtube_optimized': PROMPTS_DIR / "story_universal_youtube_optimized.txt",
+    'story_youtube_optimized': PROMPTS_DIR / "story_universal_youtube_v2.txt",
     'metadata_youtube_optimized': PROMPTS_DIR / "youtube_metadata_youtube_optimized.txt",
     'title_en': PROMPTS_DIR / "title_en.txt",
     'description_en': PROMPTS_DIR / "description_en.txt",

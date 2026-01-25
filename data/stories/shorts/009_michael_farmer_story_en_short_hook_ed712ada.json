@@ -1,0 +1,15 @@
+{
+  "id": "009_michael_farmer_story_en_short_hook_ed712ada",
+  "parent_story_id": "009_michael_farmer_story_en",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: Collapse on Cracked Earth\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Close-up shots of a farmer's weathered face, his dry, cracked fields, and his family's concerned expressions. Quick cuts between his failing crops and his desperate actions to save them. Interspersed with dramatic high-contrast visuals of the sun glaring down and the earth cracking.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Falling to the ground...\"\n\"Hope fading fast.\"\n[Visual: Michael collapsing in the dry field, clutching the soil.]\n\n[0:03-0:08] BUILD\n\"His farm, his life...\"\n\"Drying out.\"\n[Visual: Pan over parched fields, crops withering.]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Months of drought.\"\n\"Family on the brink.\"\n[Visual: Tense dinner table scene, bills on the table.]\n\n[0:15-0:20] CRISIS\n\"Missed his son's play,\"\n\"For a dying field.\"\n[Visual: Son looking sad in a school costume, Michael in the field at night.]\n\n[0:20-0:25] TURNING POINT\n\"But then, flat on the earth...\"\n\"He made a VOW.\"\n[Visual: Close-up of Michael’s determined face on the ground.]\n\n[0:25-0:30] HINT OF SOLUTION\n\"Desperate for change,\"\n\"Turned to OLD friends.\"\n[Visual: Michael on the phone, looking hopeful.]\n\n[0:30-0:40] BUILD TO CLIFFHANGER\n\"Unlikely advice comes.\"\n\"Can ancient wisdom SAVE him?\"\n[Visual: Michael meeting with other farmers, nodding, taking notes.]\n\n[0:40-0:45] PAYOFF + CTA + BRANDING\n\"Will his farm SURVIVE?\"\n\"Find out at Guidora.\"\n[Guidora branding: \"A Guidora Story\"]\n[Call to action: \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:20-0:25]: Emphasize \"VOW\" in ALL CAPS to highlight his determination and turning point.\n\n**SUGGESTED MUSIC**: Tense, dramatic strings that build to an inspirational crescendo, reflecting the mood of desperation turning to hope.\n\n**THUMBNAIL FRAME**: [0:00] - Michael dramatically collapsing in his field, symbolizing the crisis point, making viewers curious about the context and outcome.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07866,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-25T09:44:56.444624"
+}
