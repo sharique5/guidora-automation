@@ -1,0 +1,15 @@
+{
+  "id": "010_amelia_teacher_story_en_short_hook_cf807da5",
+  "parent_story_id": "010_amelia_teacher_story_en",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: Crisis Hits Small Town\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: A mix of real-life footage and poignant, evocative animations showing a small, tight-knit town facing decay, intercut with close-ups of a determined elderly woman (Amelia) and her community in distress.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Her town was DYING.\"\n[Close-up of Amelia in a desolate field, burnt crops]\n\n[0:03-0:08] BUILD\n\"Amelia watched, helpless.\"\n\"Jobs disappearing, families leaving.\"\n[Shots of closed shops, empty streets]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Then, the school faced closure.\"\n\"Her breaking point.\"\n[Visual of the old, empty classroom, Amelia's pained expression]\n\n[0:15-0:20] RISING ACTION\n\"Could she just WATCH?\"\n\"Or FIGHT back?\"\n[Amelia looking at old photos, clenching her fists]\n\n[0:20-0:25] DETERMINATION\n\"She chose to FIGHT.\"\n\"Gathering the scattered community.\"\n[Amelia speaking at a poorly attended meeting, then more joining]\n\n[0:25-0:30] CLIFFHANGER + CTA + BRANDING\n\"Will her efforts SAVE her town?\"\n[Cut to black, dramatic pause]\n\"More stories → Link in bio\"\n[Guidora branding: \"A Guidora Story\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:15-0:20]: Emphasize \"WATCH?\" and \"FIGHT back?\" in bold to highlight the decision point.\n\n**SUGGESTED MUSIC**: Emotional, inspiring soundtrack that builds from a somber tone to a more hopeful rhythm, mirroring Amelia's journey from despair to action.\n\n**THUMBNAIL FRAME**: [0:03] - Amelia standing in the burnt field, a poignant and powerful image that captures the gravity of the situation.\n\nThis script effectively utilizes the urgency of Amelia's situation to grab attention, builds tension through the escalating crises, and leaves viewers on a cliffhanger, encouraging them to follow the link for the full story. The visual concept supports the emotional ride, making it a compelling watch.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07725,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-25T11:36:38.653928"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "010_amelia_teacher_story_en_short_wisdom_eec84779",
+  "parent_story_id": "010_amelia_teacher_story_en",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: \"When Amelia Fought to Save Her Town\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Intense close-ups of Amelia's expressive face interspersed with shots of the desolate town, stressed faces of townsfolk, and visuals of closed shops and dry fields. Text overlays are bold and clear, appearing over these poignant images.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Her town was DYING.\"\n\"Amelia stood up to SAVE it.\"\n[Visual: Amelia looking determined, standing in a dried-up field]\n\n[0:03-0:08] BUILD\n\"Once a vibrant community...\"\n\"Now on the verge of COLLAPSE.\"\n[Visual: Flashing images of the town's better days vs. current state]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Schools closing. Jobs lost.\"\n\"Despair was taking over.\"\n[Visual: Closed school sign, people leaving town with bags]\n\n[0:15-0:22] ACTION\n\"Amelia REFUSED to give in.\"\n\"Her plan? Unite and REVIVE.\"\n[Visual: Amelia speaking passionately at a town meeting]\n\n[0:22-0:30] RISING ACTION\n\"Meetings were EMPTY at first.\"\n\"She persisted, they LISTENED.\"\n[Visual: Amelia handing out flyers, slowly more people join]\n\n[0:30-0:37] CLIMAX\n\"From despair to ACTION.\"\n\"The town found its spirit.\"\n[Visual: Community working together, reopening shops]\n\n[0:37-0:45] PAYOFF + CTA + BRANDING\n\"They're rebuilding, TOGETHER.\"\n[Text: \"Their fight taught resilience.\"]\n[Guidora branding: \"A Guidora Story\"]\n[Call to action: \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:00]: \"DYING\" and \"SAVE\"\n- [0:22]: \"EMPTY\" and \"LISTENED\"\n- [0:30]: \"despair to ACTION\"\n\n**SUGGESTED MUSIC**: Inspirational, with a building sense of hope and community spirit.\n\n**THUMBNAIL FRAME**: [0:00] - Amelia's determined face with the text overlay \"Her town was DYING.\" This frame encapsulates the emotional gravity and the narrative arc of the story, making it compelling for clicks.\n\nBy focusing on Amelia’s emotional journey and her active role in rallying the community, this script aims to create an impactful narrative that resonates with viewers, encouraging them to learn more about the town’s journey of resilience and unity.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07932,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-01-25T11:36:50.232502"
+}
