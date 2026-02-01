@@ -1,0 +1,15 @@
+{
+  "id": "011_anna_diplomat_story_en_short_hook_ab5af217",
+  "parent_story_id": "011_anna_diplomat_story_en",
+  "short_type": "hook",
+  "short_type_name": "Hook/Teaser",
+  "short_content": "**SHORT TITLE**: \"Last Chance for Peace?\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Dark, tension-filled negotiation room visuals interspersed with dramatic cuts to tanks and worried family scenes. Use a gritty, somber color palette to enhance the atmosphere of impending crisis.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Last chance or WAR.\"\n[Close-up: Anna's intense eyes across the table]\n[Dimly lit negotiation room]\n\n[0:03-0:08] BUILD\n\"Tanks rumble in the night—\"\n[Cut to: Tanks rolling in darkness]\n[Sound of distant explosions]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Her children's FUTURE at stake.\"\n[Video call: Anna's kids looking worried]\n[Anna's face reflects fear and determination]\n\n[0:15-0:20] ESCALATION\n\"An ancient treaty UNRAVELS.\"\n[Text overlays on scrolling images of old, tattered documents]\n[Flickers of past peaceful moments]\n\n[0:20-0:25] DILEMMA\n\"Diplomacy failing FAST.\"\n[Split screen: Military generals vs. Anna at her desk, stressed]\n[Anna's hands trembling]\n\n[0:25-0:30] CLIFFHANGER + CTA + BRANDING\n\"Can she save PEACE?\"\n[Anna stepping into the negotiation room, door closing]\n[Guidora branding: \"GUIDORA\"]\n[Call to action: \"Full story → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:00]: \"LAST chance or WAR.\"\n- [0:08]: \"Her CHILDREN'S future at stake.\"\n- [0:25]: \"Can she SAVE peace?\"\n\n**SUGGESTED MUSIC**: Tense, suspenseful orchestral score with a rising tempo to match the building tension.\n\n**THUMBNAIL FRAME**: [0:03] Close-up of Anna's intense eyes, conveying urgency and fear, overlaid with the text \"Last chance or WAR.\"",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07593,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-02-01T14:56:45.944634"
+}

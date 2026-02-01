@@ -1,0 +1,15 @@
+{
+  "id": "011_anna_diplomat_story_en_short_wisdom_900f8cb1",
+  "parent_story_id": "011_anna_diplomat_story_en",
+  "short_type": "wisdom",
+  "short_type_name": "Wisdom/Insight",
+  "short_content": "**SHORT TITLE**: \"One Call Changed the War\"\n\n**DURATION**: 45 seconds\n\n**VISUAL CONCEPT**: Dramatic close-up shots of a tense negotiation room, intercut with visuals of a worried child on a phone call, military tanks, and archival footage of peace treaties. Use stark, high-contrast lighting to emphasize tension.\n\n**SCRIPT**:\n\n[0:00-0:03] HOOK\n\"Tanks rumble outside.\"\n\"Peace hangs by a THREAD.\"\n[Visual of dark silhouettes of tanks against a night sky]\n\n[0:03-0:08] BUILD\n\"Anna faces her rival.\"\n\"Last chance for peace.\"\n[Close-up of Anna's determined face across a dimly lit negotiation table]\n\n[0:08-0:15] TENSION/CURIOSITY\n\"Her phone vibrates.\"\n\"Daughter asks: 'War, mom?'\"\n[Cut to a close-up of a trembling phone, then a child's worried face on the screen]\n\n[0:15-0:25] DEVELOPMENT\n\"Diplomacy failing.\"\n\"Anna's choice: legacy or disaster?\"\n[Quick cuts between military generals debating and Anna pacing nervously]\n\n[0:25-0:35] CLIMAX\n\"Secret talks begin.\"\n\"Finding common ground.\"\n[Visuals of Anna sneaking out to a clandestine meeting, shaking hands with her counterpart]\n\n[0:35-0:40] RESOLUTION\n\"Shared stories unlock HOPE.\"\n\"War averted.\"\n[Images of soldiers lowering their weapons, families reuniting]\n\n[0:40-0:45] PAYOFF + CTA + BRANDING\n\"Peace—against all odds.\"\n[Guidora branding: \"GUIDORA\"]\n[Call to action: \"More stories → Link in bio\"]\n\n**KEY MOMENTS FOR TEXT EMPHASIS**:\n- [0:08]: \"War, mom?\" (highlight \"War,\")\n- [0:35]: \"Shared stories unlock HOPE.\" (emphasize \"HOPE\")\n\n**SUGGESTED MUSIC**: Tense, suspenseful orchestral score building to a hopeful crescendo.\n\n**THUMBNAIL FRAME**: [0:03] - Close-up of Anna’s determined face at the negotiation table, highlighting the stakes and her role as a peacemaker.\n\nThis script captures immediate tension, builds curiosity, delivers emotional payoff, and invites viewers to explore more, effectively utilizing the YouTube Shorts format to engage and retain viewers while promoting the Guidora brand.",
+  "format": "vertical_9_16",
+  "target_duration": "30-60 seconds",
+  "generation_metadata": {
+    "cost": 0.07833,
+    "model_used": "gpt-4-turbo",
+    "template": "short_script_youtube"
+  },
+  "generated_at": "2026-02-01T14:57:02.107086"
+}
